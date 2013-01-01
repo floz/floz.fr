@@ -8,15 +8,17 @@ block content
 			.description
 				div I'M <h3>FLORIAN ZUMBRUNN</h3>,
 				div A <h2>CREATIVE DEVELOPER</h2>.
-				div <span>I'M CURRENTLY WORKING AT MAKEMEPULSE,
+				div <span>I'M CURRENTLY WORKING AT <strong>MAKEMEPULSE</strong>,
 				div IN PARIS.</span>
 
 			.skills
-				-var skills = [ "FLASH DEV: AS2,AS3", "FLASH REMOTING", "UNITY3D", "C#", "HTML5/CSS3", "JS", "COFFEESCRIPT", "SASS/STYLUS" ]
+				-var skills = [ "FLASH DEV: AS2,AS3", "FLASH REMOTING", "UNITY3D", "C#", "HTML5/CSS3", "JS", "COFFEESCRIPT", "SASS/STYLUS", "..." ]
 				-for skill, i in skills
-					span= skill
 					if( i < skills.length - 1)
-						/
+						span= skill
+							/
+					else
+						span= skill
 
 			a(href="/#") MORE INFO
 

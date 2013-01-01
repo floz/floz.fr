@@ -56,9 +56,6 @@ section {
 #home .top h2 {
   color: #ff9c66;
 }
-#home .top div {
-  overflow: hidden;
-}
 #home .top .title {
   font-size: 58px;
   line-height: 54px;
@@ -66,4 +63,18 @@ section {
 #home .top .description {
   font-size: 48px;
   line-height: 44px;
+}
+#home .top .description div {
+  overflow: hidden;
+}
+#home .top .skills {
+  color: #a59ab9;
+  font-size: 28px;
+  font-weight: 300;
+  position: relative;
+  overflow: hidden;
+}
+#home .top .skills span {
+  display: block;
+  float: left;
 }

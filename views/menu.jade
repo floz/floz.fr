@@ -1,0 +1,15 @@
+
+-var entries = [ { url: '/#', name: "ABOUT ME" }, { url: '/#', name: "WORKS" }, { url: '/#', name: "CV" } ]
+
+nav#menu
+	ul
+	-for entry, i in entries
+		-if( i == 0 )
+			li.activated
+				a(href=entry.url)
+					.content= entry.name
+		-else
+			li
+				a(href=entry.url)
+					.content= entry.name
+

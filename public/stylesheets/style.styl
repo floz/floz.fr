@@ -1,0 +1,61 @@
+vgraydark = #3d3944
+vgraylight = #756d83
+vorange = #ff9c66
+
+body
+	font 14px Georgia, Helvetica, Arial, sans-serif
+	background-color #f0f0f0
+	color vgraylight
+	padding-top 20px
+	position relative
+
+h2, strong
+	color vgraydark
+
+section 
+	margin-top 20px
+
+#main
+	position relative
+	width 940px
+	margin auto
+
+#menu
+	overflow hidden
+	padding-bottom 20px
+	border-bottom 1px dotted #c0c0c0
+	a
+		text-decoration none
+		color vgraylight
+		font 14px Quicksand
+	li
+		list-style none
+		.content
+			background-color #fff
+			float left
+			padding 7px
+			border-radius 5px
+			margin-right 10px
+		&.activated
+			.content
+				background-color vorange
+			a
+				color #fff
+
+#home
+	.top
+		font-weight bold
+		h2, h3
+			display inline
+		h3
+			color vgraydark
+		h2
+			color vorange
+		div
+			overflow hidden
+		.title
+			font-size 58px
+			line-height 54px
+		.description
+			font-size 48px
+			line-height 44px

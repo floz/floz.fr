@@ -1,0 +1,32 @@
+extends layout
+
+block content
+	section#home
+		article.top
+			.title HEY!
+
+			.description
+				div I'M <h3>FLORIAN ZUMBRUNN</h3>,
+				div A <h2>CREATIVE DEVELOPER</h2>.
+				div <span>I'M CURRENTLY WORKING AT MAKEMEPULSE,
+				div IN PARIS.</span>
+
+			.skills
+				-var skills = [ "FLASH DEV: AS2,AS3", "FLASH REMOTING", "UNITY3D", "C#", "HTML5/CSS3", "JS", "COFFEESCRIPT", "SASS/STYLUS" ]
+				-for skill, i in skills
+					span= skill
+					if( i < skills.length - 1)
+						/
+
+			a(href="/#") MORE INFO
+
+		article.bot
+			h4 MY <strong>LAST PROJECTS:</strong>
+			-var projects = [ { title: "L'OCCITANE", img: "images/default.jpg", tech: "FLASH-HTML" }, { title: "ONE PIECE", img: "images/default.jpg", tech: "FLASH-HTML" }, { title: "JUST DANCE", img: "images/default.jpg", tech: "FLASH-HTML" } ]
+			ul
+				-for project in projects
+					li
+						h3= project.title
+						.project
+							img(src="/images/default.jpg", alt=project.title, width="300", height="150")
+			a(href="/#") MORE PROJECTS

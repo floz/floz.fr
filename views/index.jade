@@ -8,8 +8,8 @@ block content
 			.description
 				div I'M <h3>FLORIAN ZUMBRUNN</h3>,
 				div A <h2>CREATIVE DEVELOPER</h2>.
-				div <span>I'M CURRENTLY WORKING AT <strong>MAKEMEPULSE</strong>,
-				div IN PARIS.</span>
+				div <span>I LOVE TO CRAFT DIGITAL STUFF</strong>,
+				div I WORK IN PARIS.</span>
 
 			.skills
 				-var skills = [ "FLASH DEV: AS2,AS3", "FLASH REMOTING", "UNITY3D", "C#", "HTML5/CSS3", "JS", "COFFEESCRIPT", "SASS/STYLUS", "..." ]
@@ -20,7 +20,8 @@ block content
 					else
 						span= skill
 
-			a(href="/#") MORE INFO
+			a.bt(href="/#") 
+				.content +MORE INFO
 
 		article.bot
 			h4 MY <strong>LAST PROJECTS:</strong>
@@ -31,4 +32,4 @@ block content
 						h3= project.title
 						.project
 							img(src="/images/default.jpg", alt=project.title, width="300", height="150")
-			a(href="/#") MORE PROJECTS
+			a.bt(href="/#") +MORE PROJECTS

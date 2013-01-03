@@ -68,13 +68,49 @@ section {
   overflow: hidden;
 }
 #home .top .skills {
-  color: #a59ab9;
-  font-size: 28px;
-  font-weight: 300;
   position: relative;
   overflow: hidden;
+  font-size: 28px;
+  font-weight: 300;
+  color: #a59ab9;
+  margin-top: 5px;
+  margin-bottom: 20px;
 }
 #home .top .skills span {
   display: block;
   float: left;
+}
+#home .top .bt {
+  color: #3d3944;
+  background-color: #fff;
+  text-decoration: none;
+  padding: 8px;
+  font: 14px Quicksand;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+#home .bot {
+  border-top: 1px dotted #756d83;
+  padding-top: 20px;
+}
+#home .bot h4 {
+  font-size: 28px;
+}
+#home .bot ul {
+  overflow: hidden;
+}
+#home .bot li {
+  list-style: none;
+  float: left;
+  margin-left: 10px;
+}
+#home .bot li:first-child {
+  margin-left: 0px;
+}
+#home .bot li h3 {
+  display: inline-block;
+  background-color: #fff;
+  font: 14px Quicksand;
+  padding: 10px;
 }

@@ -1,3 +1,5 @@
+@import 'nib'
+
 vgraydark = #3d3944
 vgraylight = #756d83
 vgrayviolet = #a59ab9
@@ -16,9 +18,18 @@ h2, strong
 section 
 	margin-top 20px
 
+.bt
+	color vgraydark
+	background-color #fff
+	text-decoration none
+	padding 8px
+	font 14px Quicksand
+	border-radius 5px
+	display inline-block
+
 #main
 	position relative
-	width 940px
+	width 920px
 	margin auto
 
 #menu
@@ -67,19 +78,12 @@ section
 			font-weight 300
 			color vgrayviolet
 			margin-top 5px
-			margin-bottom 20px
+			margin-bottom 8px
 			span
 				display block
 				float left
 		.bt
-			color vgraydark
-			background-color #fff
-			text-decoration none
-			padding 8px
-			font 14px Quicksand
-			border-radius 5px
 			margin-bottom 20px
-			display inline-block
 	.bot
 		border-top 1px dotted vgraylight
 		padding-top 20px
@@ -87,10 +91,13 @@ section
 			font-size 28px
 		ul
 			overflow hidden
+			margin-top 10px
 		li
+			position relative
+			overflow hidden
 			list-style none
 			float left
-			margin-left 10px
+			margin-left 9px
 			&:first-child
 				margin-left 0px
 			h3
@@ -98,3 +105,26 @@ section
 				background-color #fff
 				font 14px Quicksand
 				padding 10px
+			.project
+				margin-top 2px
+				border 5px solid #fff
+				width 290px
+				height 140px
+				img
+					width 290px
+					height 140px
+			.details
+				position absolute
+				bottom -40px
+				background-color #fff
+				height 40px
+				width 100%
+				span
+					display block
+					padding-left 10px
+					padding-top 14px
+					font 11px "Times New Roman"
+					color vgraylight
+		.bt
+			margin-top 10px
+			margin-bottom 100px

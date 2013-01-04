@@ -12,9 +12,19 @@ strong {
 section {
   margin-top: 20px;
 }
+.bt {
+  color: #3d3944;
+  background-color: #fff;
+  text-decoration: none;
+  padding: 8px;
+  font: 14px Quicksand;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+}
 #main {
   position: relative;
-  width: 940px;
+  width: 920px;
   margin: auto;
 }
 #menu {
@@ -34,6 +44,7 @@ section {
   background-color: #fff;
   float: left;
   padding: 7px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   margin-right: 10px;
 }
@@ -74,21 +85,14 @@ section {
   font-weight: 300;
   color: #a59ab9;
   margin-top: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 #home .top .skills span {
   display: block;
   float: left;
 }
 #home .top .bt {
-  color: #3d3944;
-  background-color: #fff;
-  text-decoration: none;
-  padding: 8px;
-  font: 14px Quicksand;
-  border-radius: 5px;
   margin-bottom: 20px;
-  display: inline-block;
 }
 #home .bot {
   border-top: 1px dotted #756d83;
@@ -99,11 +103,14 @@ section {
 }
 #home .bot ul {
   overflow: hidden;
+  margin-top: 10px;
 }
 #home .bot li {
+  position: relative;
+  overflow: hidden;
   list-style: none;
   float: left;
-  margin-left: 10px;
+  margin-left: 9px;
 }
 #home .bot li:first-child {
   margin-left: 0px;
@@ -113,4 +120,32 @@ section {
   background-color: #fff;
   font: 14px Quicksand;
   padding: 10px;
+}
+#home .bot li .project {
+  margin-top: 2px;
+  border: 5px solid #fff;
+  width: 290px;
+  height: 140px;
+}
+#home .bot li .project img {
+  width: 290px;
+  height: 140px;
+}
+#home .bot li .details {
+  position: absolute;
+  bottom: -40px;
+  background-color: #fff;
+  height: 40px;
+  width: 100%;
+}
+#home .bot li .details span {
+  display: block;
+  padding-left: 10px;
+  padding-top: 14px;
+  font: 11px "Times New Roman";
+  color: #756d83;
+}
+#home .bot .bt {
+  margin-top: 10px;
+  margin-bottom: 100px;
 }

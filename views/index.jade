@@ -29,7 +29,13 @@ block content
 			ul
 				-for project in projects
 					li
-						h3= project.title
-						.project
-							img(src="/images/default.jpg", alt=project.title, width="300", height="150")
+						a(href="/#")
+							h3= project.title
+							.project
+								img(src="/images/default.jpg", alt=project.title, width="300", height="150")
+								.layer
+									.btzoom
+									.bt VIEW MORE
+							.details 
+								span FLASH - HTML
 			a.bt(href="/#") +MORE PROJECTS

@@ -1,0 +1,20 @@
+extends layout
+
+block content
+	section#works
+		-var projects = [ { title: "L'OCCITANE", img: "images/default.jpg", tech: "FLASH-HTML" }, { title: "ONE PIECE", img: "images/default.jpg", tech: "FLASH-HTML" }, { title: "JUST DANCE", img: "images/default.jpg", tech: "FLASH-HTML" }, { title: "L'OCCITANE", img: "images/default.jpg", tech: "FLASH-HTML" }, { title: "ONE PIECE", img: "images/default.jpg", tech: "FLASH-HTML" }, { title: "JUST DANCE", img: "images/default.jpg", tech: "FLASH-HTML" }, { title: "L'OCCITANE", img: "images/default.jpg", tech: "FLASH-HTML" }, { title: "ONE PIECE", img: "images/default.jpg", tech: "FLASH-HTML" }, { title: "JUST DANCE", img: "images/default.jpg", tech: "FLASH-HTML" } ]
+		ul
+			-for project in projects
+				li
+					a(href="/#")
+						.project
+							img(src="/images/default.jpg", alt=project.title)
+							.layer
+								.bts
+									.btzoom
+										.circle
+										.plus
+									.bt VIEW MORE
+								.details 
+									span FLASH - HTML
+						h3= project.title

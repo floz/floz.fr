@@ -229,3 +229,76 @@ section {
   background-color: #ff9c66;
   color: #fff;
 }
+#project .top,
+#project .bot {
+  overflow: hidden;
+}
+#project .left,
+#project .right {
+  float: left;
+}
+#project .top {
+  margin-top: 15px;
+  border-bottom: 1px dotted #756d83;
+}
+#project .top * {
+  margin-bottom: 10px;
+}
+#project .top .left {
+  width: 300px;
+}
+#project .top .left p {
+  margin: 0;
+}
+#project .top .left .bt {
+  margin-top: 5px;
+}
+#project .top .title {
+  font: 28px Georgia;
+  font-weight: bold;
+  color: #756d83;
+}
+#project .top .subtitle,
+#project .top .jobs,
+#project .top .technos {
+  font: 18px Georgia;
+  font-weight: bold;
+  color: #3d3944;
+}
+#project .top .jobs {
+  color: #ff9c66;
+}
+#project .top .technos {
+  color: #a59ab9;
+}
+#project .top .right {
+  width: 300px;
+  font: 14px Georgia;
+  font-weight: bold;
+  color: #756d83;
+}
+#project .bot {
+  position: relative;
+  height: 400px;
+  margin-top: 20px;
+}
+#project .bot .slides {
+  width: 600px;
+  height: 400px;
+  background-color: #f0f;
+}
+#project .bot .bt {
+  display: block;
+  margin-bottom: 5px;
+}
+#project .bot .right {
+  margin-left: 10px;
+}
+#project .bot .pagination {
+  text-align: center;
+  font: 34px Georgia;
+  font-weight: normal;
+  color: #a59ab9;
+  margin-top: 10px;
+  border-top: 1px dotted #756d83;
+}

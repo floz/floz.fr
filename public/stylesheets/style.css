@@ -22,6 +22,10 @@ section {
   border-radius: 5px;
   display: inline-block;
 }
+.bt:hover {
+  background-color: #ff9c66;
+  color: #fff;
+}
 .layer {
   position: absolute;
   background-color: rgba(117,109,131,0.7);
@@ -87,23 +91,18 @@ section {
   padding-bottom: 20px;
   border-bottom: 1px dotted #c0c0c0;
 }
-#menu a {
-  text-decoration: none;
-  color: #756d83;
-  font: 14px Quicksand;
-}
-#menu li .content {
-  background-color: #fff;
+#menu li {
   float: left;
-  padding: 7px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  margin-right: 10px;
+  margin-left: 10px;
 }
-#menu li.activated .content {
+#menu li:first-child {
+  margin-left: 0px;
+}
+#menu li:first-child .bt {
+  background-color: #f0f;
+}
+#menu li.activated .bt {
   background-color: #ff9c66;
-}
-#menu li.activated a {
   color: #fff;
 }
 #home .top {

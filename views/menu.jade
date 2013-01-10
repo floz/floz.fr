@@ -1,15 +1,14 @@
+include mixins
 
 -var entries = [ { url: '/', name: "ABOUT ME" }, { url: '/works', name: "WORKS" }, { url: '/#', name: "CV" } ]
 
 nav#menu
 	ul
-	-for entry, i in entries
-		-if( i == 0 )
-			li.activated
-				a(href=entry.url)
-					.content= entry.name
-		-else
-			li
-				a(href=entry.url)
-					.content= entry.name
+		-for entry, i in entries
+			-if( i == 0 )
+				li.activated
+					mixin bt( entry.name, entry.url )
+			-else
+				li
+					mixin bt( entry.name, entry.url )
 

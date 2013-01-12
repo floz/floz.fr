@@ -25,14 +25,13 @@ block content
 
 		article.bot
 			h4 MY <strong>LAST PROJECTS:</strong>
-			-var projects = [ { title: "L'OCCITANE", img: "images/default.jpg", tech: "FLASH-HTML" }, { title: "ONE PIECE", img: "images/default.jpg", tech: "FLASH-HTML" }, { title: "JUST DANCE", img: "images/default.jpg", tech: "FLASH-HTML" } ]
 			ul
-				-for project in projects
+				-for project in data
 					li
 						a(href="/#")
 							h3= project.title
 							.project
-								img(src="/images/default.jpg", alt=project.title, width="300", height="150")
+								img(src=project.preview, alt=project.title, width="300", height="150")
 								.layer
 									.bts
 										.btzoom

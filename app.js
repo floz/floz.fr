@@ -7,7 +7,6 @@ var express = require('express')
   , stylus = require('stylus')
   , nib = require('nib')
   , routes = require('./lib/routes')
-  , works = require('./lib/routes/works')
   , http = require('http')
   , path = require('path');
 
@@ -33,9 +32,9 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-app.get('/', routes.index);
-app.get('/works', works.index);
-app.get('/works/:id?', works.project);
+app.get('/', routes.home);
+app.get('/works', routes.works);
+app.get('/works/:id?', routes.project);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

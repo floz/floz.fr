@@ -11,12 +11,14 @@
 				"BLABLASD LSAD OW JOWD",
 				"ASD ASDLASD ASLD AS"
 			],
+			"preview": "images/preview.jpg",
 			"images": [
 				"preview.jpg",
 				"preview2.jpg",
 				"preview.jpg"
 			],
-			"url": "www.google.com"
+			"url": "www.google.com",
+			"featured": true
 		},
 		{
 			"id": "one_piece_2",
@@ -28,13 +30,15 @@
 				"I WORKED BLABLABLA",
 				"BLABLASD LSAD OW JOWD"
 			],
+			"preview": "images/preview.jpg",
 			"images": [
 				"preview.jpg",
 				"preview2.jpg",
 				"preview.jpg",
 				"preview2.jpg"
 			],
-			"url": "www.google.com"
+			"url": "www.google.com",
+			"featured": false
 		}
 	]
 }	

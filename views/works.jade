@@ -2,13 +2,12 @@ extends layout
 
 block content
 	section#works
-		-var projects = [ { title: "L'OCCITANE", img: "images/default.jpg", tech: "FLASH-HTML" }, { title: "ONE PIECE", img: "images/default.jpg", tech: "FLASH-HTML" }, { title: "JUST DANCE", img: "images/default.jpg", tech: "FLASH-HTML" }, { title: "L'OCCITANE", img: "images/default.jpg", tech: "FLASH-HTML" }, { title: "ONE PIECE", img: "images/default.jpg", tech: "FLASH-HTML" }, { title: "JUST DANCE", img: "images/default.jpg", tech: "FLASH-HTML" }, { title: "L'OCCITANE", img: "images/default.jpg", tech: "FLASH-HTML" }, { title: "ONE PIECE", img: "images/default.jpg", tech: "FLASH-HTML" }, { title: "JUST DANCE", img: "images/default.jpg", tech: "FLASH-HTML" } ]
 		ul
-			-for project in projects
+			-for project in data
 				li
-					a(href="/#")
+					a(href="/works/#{project.id}")
 						.project
-							img(src="/images/default.jpg", alt=project.title)
+							img(src=project.preview, alt=project.title)
 							.layer
 								.bts
 									.btzoom

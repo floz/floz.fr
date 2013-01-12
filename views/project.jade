@@ -5,18 +5,18 @@ block content
 	article#project
 		.top
 			mixin bt( "BACK", "#" )
-			h3.title ONE PIECE
+			h3.title= data.title
 			.left
-				h3.subtitle DEVELOPMENT OF THE LAUNCHING SITE OF THE GAME ONE PIECE FOR PS3
+				h3.subtitle= data.subtitle
 				h2.jobs 
-					p LEAD DEVELOPER 
-					p PROJECT MANAGER
-				.technos HTML/FLASH/JS
+					-for job in data.jobs
+						p= job
+				.technos= data.technos
+
 				mixin bt( "> VISIT", "#" )
 			.right
-				p I worked blabla
-				p blablabla
-				p lblalsdalsd
+				-for desc in data.description
+					p= desc
 		.bot
 			.left
 				.slides

@@ -5,7 +5,7 @@
 			"title": "ONE PIECE",
 			"subtitle": "DEVELOPMENT OF THE LAUNCHING SITE OF THE GAME ONE PIECE FOR PS3",
 			"jobs": [ "LEAD DEVELOPER", "PROJECT MANAGER" ],
-			"technos": [ "HTML", "FLASH", "JS" ],
+			"technos": "HTML/FLASH/JS",
 			"description": [
 				"I WORKED BLABLABLA",
 				"BLABLASD LSAD OW JOWD",
@@ -17,7 +17,7 @@
 				"preview2.jpg",
 				"preview.jpg"
 			],
-			"url": "www.google.com",
+			"url": "http://www.google.com",
 			"featured": true
 		},
 		{

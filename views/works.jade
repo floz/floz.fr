@@ -5,7 +5,7 @@ block content
 		ul
 			-for project in data
 				li
-					a(href="/works/#{project.id}")
+					a(href="/works/"+project.id)
 						.project
 							img(src=project.preview, alt=project.title)
 							.layer

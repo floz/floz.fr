@@ -41,8 +41,9 @@
 			overflow hidden
 			float left
 			margin-left 9px
-			&:first-child
-				margin-left 0px
+			a
+				text-decoration none
+				color vgraydark
 			h3
 				display inline-block
 				background-color #fff
@@ -57,6 +58,13 @@
 					position absolute
 					width 290px
 					height 140px
+			&:first-child
+				margin-left 0px
+			&:hover
+				a
+					color #fff
+				h3
+					background-color vorange
 		&>.bt
 			margin-top 10px
 			margin-bottom 100px

@@ -1,14 +1,13 @@
 include mixins
 
--var entries = [ { url: '/', name: "ABOUT ME" }, { url: '/works', name: "WORKS" }, { url: '/#', name: "CV" } ]
+-var entries = [ { url: '/', id: "about", name: "ABOUT ME" }, { url: '/works', id: "works", name: "WORKS" } ]
 
 nav#menu
 	ul
-		-for entry, i in entries
-			-if( i == 0 )
-				li.activated
+		-for entry in entries
+			-if( entry.id == navId )
+				li.activated.animated.hide
 					mixin bt( entry.name, entry.url )
 			-else
-				li
+				li.animated.hide
 					mixin bt( entry.name, entry.url )
-

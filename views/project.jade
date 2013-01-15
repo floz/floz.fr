@@ -4,7 +4,7 @@ include mixins
 block content
 	article#project
 		.top
-			mixin bt( "BACK", "#" )
+			mixin bt( "BACK", "/works" )
 			h3.title= data.title
 			.left
 				h3.subtitle= data.subtitle
@@ -13,7 +13,7 @@ block content
 						p= job
 				.technos= data.technos
 
-				mixin bt( "> VISIT", "#" )
+				mixin bt( "> VISIT", data.url )
 			.right
 				-for desc in data.description
 					p= desc

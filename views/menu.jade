@@ -4,10 +4,11 @@ include mixins
 
 nav#menu
 	ul
-		-for entry in entries
+		-for entry, i in entries
 			-if( entry.id == navId )
-				li.activated.animated.hide
+				li.activated.animated(class="d" + (i + 1) )
 					mixin bt( entry.name, entry.url )
 			-else
-				li.animated.hide
+				li.animated(class="d" + (i + 1) )
 					mixin bt( entry.name, entry.url )
+	.clear

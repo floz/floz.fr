@@ -4,16 +4,21 @@ include mixins
 block content
 	section#home
 		article.top
-			.title HEY!
+			.title.animated
+				.content HEY!
 
 			.description
-				div I'M <h3>FLORIAN ZUMBRUNN</h3>,
-				div A <h2>CREATIVE DEVELOPER</h2>.
-				div <span>I LOVE TO CRAFT DIGITAL STUFF</strong>,
-				div I WORK IN PARIS.</span>
+				.holder.animated.d1
+					.content I'M <h3>FLORIAN ZUMBRUNN</h3>,
+				.holder.animated.d2
+					.content A <h2>CREATIVE DEVELOPER</h2>.
+				.holder.animated.d3
+					.content <span>I LOVE TO CRAFT DIGITAL STUFF</strong>,
+				.holder.animated.d4
+					.content I WORK IN PARIS.</span>
 
 			.skills
-				-var skills = [ "HTML5/CSS3", "JADE", "JS", "COFFEESCRIPT", "SASS/STYLUS", "FLASH DEV: AS2,AS3", "FLASH REMOTING", "UNITY3D", "C#", "PYTHON", "PHP", "..." ]
+				-var skills = [ "HTML5/CSS3", "JADE", "JS", "COFFEESCRIPT", "SASS/STYLUS", "AS3", "FLASH REMOTING", "UNITY3D", "C#", "PYTHON", "PHP", "..." ]
 				-for skill, i in skills
 					if( i < skills.length - 1)
 						span= skill

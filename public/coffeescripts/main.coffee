@@ -1,15 +1,14 @@
-$ ->
-	setTimeout init, 100
-	#do init
-	return
+$( document ).ready ->
+	# setTimeout init, 1000
+	do init
 
 init = ->
 	do show
-	return
+	# home = new Home
+	# home.init()
 
 show = ->
 	$( ".animated" ).each ->
 		$this = $( this )
 		$this.removeClass "hide"
 		$this.addClass "show"
-		return

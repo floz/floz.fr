@@ -1,12 +1,14 @@
+@import "mixins"
 
 #menu
 	padding-bottom 20px
 	border-bottom 1px dotted #c0c0c0
 	li
 		float left
-		transition all 0.5s ease-out
 		opacity 0
+		antiflick()
 		&.show
+			transition all 0.5s ease-out
 			opacity 1
 			margin-left 10px
 		&.hide
@@ -18,4 +20,4 @@
 				color #fff
 		for i in 1 2
 			&.d{i}
-				transition-delay 0.25 - i * 0.125s
+				transition-delay i * 0.125s

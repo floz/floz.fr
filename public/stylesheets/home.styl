@@ -8,13 +8,40 @@
 		h2
 			color vorange
 		.title
+			position relative
 			font-size 58px
 			line-height 54px
+			height 54px
+			overflow hidden
+			.content
+				position absolute
+				top 58px
+			&.show
+				.content
+					transition top 0.4s ease-out
+					top 0px
+			&.hide
+				.content
+					top 58px
 		.description
 			font-size 48px
 			line-height 44px
-			div
+			.holder
+				position relative
 				overflow hidden
+				height 44px
+				.content
+					position absolute
+					top 48px
+				&.show
+					.content
+						transition top 0.4s ease-out
+						top 0px
+					for i in 1 2 3 4
+						&.d{i}
+							.content
+								transition-delay i * 0.125s
+
 		.skills
 			position relative
 			overflow hidden

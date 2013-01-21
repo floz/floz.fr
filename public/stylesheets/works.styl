@@ -18,6 +18,7 @@ vworksheight = 200px
 			font 14px Quicksand
 			color vgraylight
 			padding 7px 10px 7px 10px
+			opacity 0
 		.project
 			position absolute
 			width vworkswidth
@@ -34,3 +35,7 @@ vworksheight = 200px
 			h3
 				background-color vorange
 				color #fff
+		&.show
+			h3
+				transition opacity 0.4s ease-out
+				opacity 1

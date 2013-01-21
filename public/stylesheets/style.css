@@ -540,6 +540,9 @@ section {
   font: 14px Quicksand;
   color: #756d83;
   padding: 7px 10px 7px 10px;
+  opacity: 0;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: alpha(opacity=0);
 }
 #works li .project {
   position: absolute;
@@ -560,6 +563,16 @@ section {
 #works li:hover h3 {
   background-color: #ff9c66;
   color: #fff;
+}
+#works li.show h3 {
+  -webkit-transition: opacity 0.4s ease-out;
+  -moz-transition: opacity 0.4s ease-out;
+  -o-transition: opacity 0.4s ease-out;
+  -ms-transition: opacity 0.4s ease-out;
+  transition: opacity 0.4s ease-out;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
 }
 #project .top,
 #project .bot {

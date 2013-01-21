@@ -4,7 +4,7 @@ block content
 	section#works
 		ul
 			-for project in data
-				li
+				li.animated
 					a(href="/works/"+project.id)
 						.project
 							img(src=project.preview, alt=project.title)

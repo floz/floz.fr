@@ -1,5 +1,4 @@
 $( document ).ready ->
-	# setTimeout init, 1000
 	do init
 
 init = ->

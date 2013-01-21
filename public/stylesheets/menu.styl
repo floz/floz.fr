@@ -5,19 +5,15 @@
 	border-bottom 1px dotted #c0c0c0
 	li
 		float left
-		opacity 0
+		margin-left 10px
 		antiflick()
-		&.show
-			transition all 0.5s ease-out
-			opacity 1
-			margin-left 10px
-		&.hide
-			opacity 0
-			margin-left -10px
 		&.activated
 			.bt
 				background-color vorange
 				color #fff
 		for i in 1 2
 			&.d{i}
-				transition-delay i * 0.125s
+				.bt
+					transition-delay i * 0.075s
+		&:first-child
+			margin-left 0px

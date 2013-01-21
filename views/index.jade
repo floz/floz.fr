@@ -13,24 +13,29 @@ block content
 				.holder.animated.d2
 					.content A <h2>CREATIVE DEVELOPER</h2>.
 				.holder.animated.d3
-					.content <span>I LOVE TO CRAFT DIGITAL STUFF</strong>,
+					.content <span>I LOVE TO CRAFT DIGITAL STUFF,
 				.holder.animated.d4
 					.content I WORK IN PARIS.</span>
 
 			.skills
-				-var skills = [ "HTML5/CSS3", "JADE", "JS", "COFFEESCRIPT", "SASS/STYLUS", "AS3", "FLASH REMOTING", "UNITY3D", "C#", "PYTHON", "PHP", "..." ]
+				-var skills = [ "HTML5", "CSS3", "JADE", "JS", "COFFEESCRIPT", "SASS/STYLUS", "AS3", "FLASH REMOTING", "UNITY3D", "C#", "PYTHON", "PHP", "..." ]
 				-for skill, i in skills
-					if( i < skills.length - 1)
-						span= skill
-							/
+					if( i < skills.length - 1 )
+						.holder.animated(class="d" + ( i + 1 ))
+							.emul= skill
+								/
+							.content= skill
+								/
 					else
-						span= skill
-
-			a.bt(href="/#") 
-				.content +MORE INFO
+						.holder.animated(class="d" + ( i + 1 ))
+							.emul= skill
+							.content= skill
+	
+			mixin bt( "+MORE INFO", "#" )
 
 		article.bot
-			h4 MY <strong>LAST PROJECTS:</strong>
+			.holder.animated
+				h4 MY <strong>LAST PROJECTS:</strong>
 			ul
 				-for project in data
 					li
@@ -39,6 +44,7 @@ block content
 							.project
 								img(src=project.preview, alt=project.title, width="300", height="150")
 								.layer
+									.background
 									.bts
 										.btzoom
 											.circle

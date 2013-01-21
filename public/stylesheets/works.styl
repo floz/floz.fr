@@ -1,3 +1,5 @@
+@import "mixins"
+
 vworkswidth = 220px
 vworksheight = 200px
 #works
@@ -10,6 +12,7 @@ vworksheight = 200px
 		height vworksheight
 		margin-right 1%
 		margin-bottom 10px
+		forcegpu()
 		&:last-child
 			margin-right 0
 		h3
@@ -26,16 +29,28 @@ vworksheight = 200px
 			img
 				position absolute
 			.layer
-				display none
 				width vworkswidth
 				height vworksheight
 				.bts
 					margin-top 70px
-		&:hover
-			h3
-				background-color vorange
-				color #fff
 		&.show
 			h3
 				transition opacity 0.4s ease-out
 				opacity 1
+			&:hover
+				h3
+					transition background-color 0.4s ease-out
+					background-color vorange
+					color #fff
+				.background
+					opacity 1
+				.details
+					bottom 0
+				.btzoom
+					transition-delay 0.2s
+					transform scale( 1, 1 )
+					opacity 1
+				.bt
+					margin-left 10px
+					transition-delay 0.3s
+					opacity 1

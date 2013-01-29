@@ -219,7 +219,6 @@ section {
 }
 #home .top .title .content {
   position: absolute;
-  top: 58px;
 }
 #home .top .description {
   font-size: 48px;
@@ -232,7 +231,6 @@ section {
 }
 #home .top .description .holder .content {
   position: absolute;
-  top: 48px;
 }
 #home .top .skills {
   position: relative;
@@ -254,7 +252,6 @@ section {
 }
 #home .top .skills .holder .content {
   position: absolute;
-  top: 33px;
 }
 #home .top .bt {
   margin-bottom: 20px;

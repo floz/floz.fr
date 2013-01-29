@@ -221,17 +221,6 @@ section {
   position: absolute;
   top: 58px;
 }
-#home .top .title.show .content {
-  -webkit-transition: top 0.4s ease-out;
-  -moz-transition: top 0.4s ease-out;
-  -o-transition: top 0.4s ease-out;
-  -ms-transition: top 0.4s ease-out;
-  transition: top 0.4s ease-out;
-  top: 0px;
-}
-#home .top .title.hide .content {
-  top: 58px;
-}
 #home .top .description {
   font-size: 48px;
   line-height: 44px;
@@ -244,42 +233,6 @@ section {
 #home .top .description .holder .content {
   position: absolute;
   top: 48px;
-}
-#home .top .description .holder.show .content {
-  -webkit-transition: top 0.4s ease-out;
-  -moz-transition: top 0.4s ease-out;
-  -o-transition: top 0.4s ease-out;
-  -ms-transition: top 0.4s ease-out;
-  transition: top 0.4s ease-out;
-  top: 0px;
-}
-#home .top .description .holder.show.d1 .content {
-  -webkit-transition-delay: 0.125s;
-  -moz-transition-delay: 0.125s;
-  -o-transition-delay: 0.125s;
-  -ms-transition-delay: 0.125s;
-  transition-delay: 0.125s;
-}
-#home .top .description .holder.show.d2 .content {
-  -webkit-transition-delay: 0.25s;
-  -moz-transition-delay: 0.25s;
-  -o-transition-delay: 0.25s;
-  -ms-transition-delay: 0.25s;
-  transition-delay: 0.25s;
-}
-#home .top .description .holder.show.d3 .content {
-  -webkit-transition-delay: 0.375s;
-  -moz-transition-delay: 0.375s;
-  -o-transition-delay: 0.375s;
-  -ms-transition-delay: 0.375s;
-  transition-delay: 0.375s;
-}
-#home .top .description .holder.show.d4 .content {
-  -webkit-transition-delay: 0.5s;
-  -moz-transition-delay: 0.5s;
-  -o-transition-delay: 0.5s;
-  -ms-transition-delay: 0.5s;
-  transition-delay: 0.5s;
 }
 #home .top .skills {
   position: relative;
@@ -301,108 +254,6 @@ section {
 }
 #home .top .skills .holder .content {
   position: absolute;
-  top: 33px;
-}
-#home .top .skills .holder.show .content {
-  -webkit-transition: top 0.2s ease-out;
-  -moz-transition: top 0.2s ease-out;
-  -o-transition: top 0.2s ease-out;
-  -ms-transition: top 0.2s ease-out;
-  transition: top 0.2s ease-out;
-  top: 0;
-}
-#home .top .skills .holder.show.d1 .content {
-  -webkit-transition-delay: 0.365s;
-  -moz-transition-delay: 0.365s;
-  -o-transition-delay: 0.365s;
-  -ms-transition-delay: 0.365s;
-  transition-delay: 0.365s;
-}
-#home .top .skills .holder.show.d2 .content {
-  -webkit-transition-delay: 0.43s;
-  -moz-transition-delay: 0.43s;
-  -o-transition-delay: 0.43s;
-  -ms-transition-delay: 0.43s;
-  transition-delay: 0.43s;
-}
-#home .top .skills .holder.show.d3 .content {
-  -webkit-transition-delay: 0.495s;
-  -moz-transition-delay: 0.495s;
-  -o-transition-delay: 0.495s;
-  -ms-transition-delay: 0.495s;
-  transition-delay: 0.495s;
-}
-#home .top .skills .holder.show.d4 .content {
-  -webkit-transition-delay: 0.56s;
-  -moz-transition-delay: 0.56s;
-  -o-transition-delay: 0.56s;
-  -ms-transition-delay: 0.56s;
-  transition-delay: 0.56s;
-}
-#home .top .skills .holder.show.d5 .content {
-  -webkit-transition-delay: 0.625s;
-  -moz-transition-delay: 0.625s;
-  -o-transition-delay: 0.625s;
-  -ms-transition-delay: 0.625s;
-  transition-delay: 0.625s;
-}
-#home .top .skills .holder.show.d6 .content {
-  -webkit-transition-delay: 0.69s;
-  -moz-transition-delay: 0.69s;
-  -o-transition-delay: 0.69s;
-  -ms-transition-delay: 0.69s;
-  transition-delay: 0.69s;
-}
-#home .top .skills .holder.show.d7 .content {
-  -webkit-transition-delay: 0.755s;
-  -moz-transition-delay: 0.755s;
-  -o-transition-delay: 0.755s;
-  -ms-transition-delay: 0.755s;
-  transition-delay: 0.755s;
-}
-#home .top .skills .holder.show.d8 .content {
-  -webkit-transition-delay: 0.8200000000000001s;
-  -moz-transition-delay: 0.8200000000000001s;
-  -o-transition-delay: 0.8200000000000001s;
-  -ms-transition-delay: 0.8200000000000001s;
-  transition-delay: 0.8200000000000001s;
-}
-#home .top .skills .holder.show.d9 .content {
-  -webkit-transition-delay: 0.885s;
-  -moz-transition-delay: 0.885s;
-  -o-transition-delay: 0.885s;
-  -ms-transition-delay: 0.885s;
-  transition-delay: 0.885s;
-}
-#home .top .skills .holder.show.d10 .content {
-  -webkit-transition-delay: 0.95s;
-  -moz-transition-delay: 0.95s;
-  -o-transition-delay: 0.95s;
-  -ms-transition-delay: 0.95s;
-  transition-delay: 0.95s;
-}
-#home .top .skills .holder.show.d11 .content {
-  -webkit-transition-delay: 1.0150000000000001s;
-  -moz-transition-delay: 1.0150000000000001s;
-  -o-transition-delay: 1.0150000000000001s;
-  -ms-transition-delay: 1.0150000000000001s;
-  transition-delay: 1.0150000000000001s;
-}
-#home .top .skills .holder.show.d12 .content {
-  -webkit-transition-delay: 1.08s;
-  -moz-transition-delay: 1.08s;
-  -o-transition-delay: 1.08s;
-  -ms-transition-delay: 1.08s;
-  transition-delay: 1.08s;
-}
-#home .top .skills .holder.show.d13 .content {
-  -webkit-transition-delay: 1.145s;
-  -moz-transition-delay: 1.145s;
-  -o-transition-delay: 1.145s;
-  -ms-transition-delay: 1.145s;
-  transition-delay: 1.145s;
-}
-#home .top .skills .holder.hidden .content {
   top: 33px;
 }
 #home .top .bt {

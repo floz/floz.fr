@@ -15,14 +15,7 @@
 			overflow hidden
 			.content
 				position absolute
-				top 58px
-			&.show
-				.content
-					transition top 0.4s ease-out
-					top 0px
-			&.hide
-				.content
-					top 58px
+				top 58px		
 		.description
 			font-size 48px
 			line-height 44px
@@ -33,15 +26,6 @@
 				.content
 					position absolute
 					top 48px
-				&.show
-					.content
-						transition top 0.4s ease-out
-						top 0px
-					for i in 1 2 3 4
-						&.d{i}
-							.content
-								transition-delay i * 0.125s
-
 		.skills
 			position relative
 			overflow hidden
@@ -60,17 +44,6 @@
 				.content
 					position absolute
 					top h
-				&.show
-					.content
-						transition top 0.2s ease-out
-						top 0
-					for i in 1..13
-						&.d{i}
-							.content
-								transition-delay 0.3s + i * 0.065s
-				&.hidden
-					.content
-						top h
 		.bt
 			margin-bottom 20px
 	.bot

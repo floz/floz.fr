@@ -3,8 +3,6 @@ $( document ).ready ->
 
 init = ->
 	do show
-	# home = new Home
-	# home.init()
 
 show = ->
 	$( ".animated" ).each ->

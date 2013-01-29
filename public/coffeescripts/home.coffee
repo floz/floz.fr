@@ -1,14 +1,14 @@
-class Home
+class Home extends Module
 
 	init: ->
-		for element in $( "article.top .content" )
+		for element in [ $( "article.top .content" ), $( "article.bot h4" ) ]
 			element = $( element )
 			element.css { "top": element.height() }
+		
 		return
 
 	show: ->
-		delay = showTop()
-		showBot( delay )
+		showBot( showTop() - .75 )
 
 	showTop = ->
 		delay = 0
@@ -19,11 +19,8 @@ class Home
 		delay
 
 	showBot = ( delay ) ->
-		console.log delay
+		TweenLite.to $( "article.bot h4" ), .4, { top: 0, delay: delay, ease: Quad.easeOut }
 
 	hide: ->
 
-home = new Home
-home.init()
-$( document ).ready ->
-	home.show()
+new Home

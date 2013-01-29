@@ -1,11 +1,15 @@
 $( document ).ready ->
-	do init
+	init()
 
 init = ->
-	do show
+	show()
 
 show = ->
+	do module.show for module in ModuleManager.modules
+
 	$( ".animated" ).each ->
 		$this = $( this )
 		$this.removeClass "hide"
 		$this.addClass "show"
+
+	return

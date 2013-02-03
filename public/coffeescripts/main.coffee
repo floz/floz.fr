@@ -3,6 +3,7 @@ $( document ).ready ->
 
 init = ->
 	show()
+	new Menu()
 
 show = ->
 	do module.show for module in ModuleManager.modules

@@ -20,6 +20,7 @@ class Home extends Module
 
 	showBot = ( delay ) ->
 		TweenLite.to $( "article.bot h4" ), .4, { top: 0, delay: delay, ease: Quad.easeOut }
+		new ProjectPreview( $( "article.bot li a" ) )
 
 	hide: ->
 

@@ -45,11 +45,12 @@ Home = (function(_super) {
   };
 
   showBot = function(delay) {
-    return TweenLite.to($("article.bot h4"), .4, {
+    TweenLite.to($("article.bot h4"), .4, {
       top: 0,
       delay: delay,
       ease: Quad.easeOut
     });
+    return new ProjectPreview($("article.bot li a"));
   };
 
   Home.prototype.hide = function() {};

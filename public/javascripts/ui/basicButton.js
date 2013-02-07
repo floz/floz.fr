@@ -2,11 +2,11 @@
 var BasicButton;
 
 BasicButton = (function() {
-  var out;
+  var out, over;
 
   function BasicButton(target) {
     this.target = target;
-    $(this.target).hover(this.over, out);
+    $(this.target).hover(over, out);
   }
 
   BasicButton.prototype.show = function() {
@@ -17,7 +17,7 @@ BasicButton = (function() {
     return console.log("hide");
   };
 
-  BasicButton.prototype.over = function() {
+  over = function() {
     return TweenLite.to(this, .2, {
       color: "#ffffff",
       backgroundColor: "#ff9c66",

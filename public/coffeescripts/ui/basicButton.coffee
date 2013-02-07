@@ -1,7 +1,7 @@
 class BasicButton
 
 	constructor: ( @target ) ->
-		$( @target ).hover( @over, out )
+		$( @target ).hover( over, out )
 
 	show: ->
 		console.log "show"
@@ -9,7 +9,7 @@ class BasicButton
 	hide: ->
 		console.log "hide"
 
-	over: ->
+	over = ->
 		TweenLite.to @, .2, { color: "#ffffff", backgroundColor: "#ff9c66", ease: Quad.easeOut }
 
 	out = ->

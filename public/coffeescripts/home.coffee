@@ -19,8 +19,11 @@ class Home extends Module
 		delay
 
 	showBot = ( delay ) ->
-		TweenLite.to $( "article.bot h4" ), .4, { top: 0, delay: delay, ease: Quad.easeOut }
-		p = new ProjectPreview( $( "article.bot li a" ) )
+		$botTitle = $( "article.bot h4" )
+		TweenLite.to $botTitle, .4, { top: 0, delay: delay, ease: Quad.easeOut }
+
+		$projects = $( "article.bot li a" )
+		p = new ProjectPreview( $projects )
 		p.show delay + .1
 
 	hide: ->

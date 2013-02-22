@@ -181,6 +181,7 @@ section {
 #home .bot {
   border-top: 1px dotted #756d83;
   padding-top: 20px;
+  margin-bottom: 100px;
 }
 #home .bot .holder {
   position: relative;
@@ -201,6 +202,7 @@ section {
   overflow: hidden;
   float: left;
   margin-left: 9px;
+  height: 190px;
 }
 #home .bot li a {
   text-decoration: none;
@@ -238,7 +240,6 @@ section {
 }
 #home .bot>.bt {
   margin-top: 10px;
-  margin-bottom: 100px;
 }
 #works {
   margin-top: 10px;

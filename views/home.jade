@@ -41,15 +41,15 @@ block content
 					li.animated
 						a(href="/works/"+project.id)
 							h3= project.title
-							.project
+							span.project
 								img(src=project.preview, alt=project.title, width="300", height="150")
-								.layer
-									.background
-									.bts
-										.btzoom
-											.circle
-											.plus
-										.bt VIEW MORE
-									.details 
+								span.layer
+									span.background
+									span.bts
+										span.btzoom
+											span.circle
+											span.plus
+										span.bt VIEW MORE
+									span.details 
 										span FLASH - HTML
 			mixin bt( "+MORE PROJECTS", "/works" )

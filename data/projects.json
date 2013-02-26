@@ -17,8 +17,7 @@
 				"preview2.jpg",
 				"preview.jpg"
 			],
-			"url": "http://www.google.com",
-			"featured": true
+			"url": "http://www.google.com"
 		},
 		{
 			"id": "one_piece_2",
@@ -37,8 +36,7 @@
 				"preview.jpg",
 				"preview2.jpg"
 			],
-			"url": "www.google.com",
-			"featured": false
+			"url": "www.google.com"
 		}
 	]
 }	

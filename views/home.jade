@@ -30,12 +30,10 @@ block content
 						.holder.animated(class="d" + ( i + 1 ))
 							.emul= skill
 							.content= skill
-	
-			mixin bt( "+MORE INFO", "#" )
 
 		article.bot
 			.holder.animated
-				h4 MY <strong>LAST PROJECTS:</strong>
+				h4 MY <strong>PROJECTS:</strong>
 			ul
 				-for project in data
 					li.animated
@@ -52,4 +50,3 @@ block content
 										span.bt VIEW MORE
 									span.details 
 										span FLASH - HTML
-			mixin bt( "+MORE PROJECTS", "/works" )

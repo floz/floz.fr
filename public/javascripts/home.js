@@ -45,16 +45,21 @@ Home = (function(_super) {
   };
 
   showBot = function(delay) {
-    var $botTitle, $projects, p;
+    var $botTitle, $projects, i, p, _i, _ref, _results;
     $botTitle = $("article.bot h4");
     TweenLite.to($botTitle, .4, {
       top: 0,
       delay: delay,
       ease: Quad.easeOut
     });
-    $projects = $("article.bot li a");
-    p = new ProjectPreview($projects);
-    return p.show(delay + .1);
+    $projects = $("article.bot li");
+    _results = [];
+    for (i = _i = 0, _ref = $projects.length; _i < _ref; i = _i += 1) {
+      p = new ProjectPreview($projects[i]);
+      p.show(delay + .1);
+      _results.push(delay += .2);
+    }
+    return _results;
   };
 
   Home.prototype.hide = function() {};

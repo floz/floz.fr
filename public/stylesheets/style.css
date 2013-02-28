@@ -208,17 +208,22 @@ section {
   text-decoration: none;
   color: #3d3944;
 }
-#home .bot li h3 {
-  display: inline-block;
+#home .bot li .project_title {
   background-color: #fff;
-  font: 14px Quicksand;
+  display: inline-block;
   padding: 10px;
+  overflow: hidden;
+  height: 17px;
+}
+#home .bot li h3 {
+  font: 14px Quicksand;
 }
 #home .bot li .project {
   position: relative;
   display: block;
   margin-top: 2px;
   border: 5px solid #fff;
+  background: #fff;
   width: 290px;
   height: 140px;
 }

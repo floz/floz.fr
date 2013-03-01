@@ -6,56 +6,75 @@ ProjectPreview = (function() {
 
   function ProjectPreview(target) {
     this.target = target;
+    this.activate = __bind(this.activate, this);
     this.out = __bind(this.out, this);
     this.over = __bind(this.over, this);
     this.$target = $(this.target);
     this.projectTitle = new ProjectTitle(this.$target.find(".project_title"));
     this.init();
-    $(this.target).find("a").hover(this.over, this.out);
   }
 
   ProjectPreview.prototype.init = function() {
+    this.$projectHolder = this.$target.find(".project_holder");
     this.$project = this.$target.find(".project");
     this.$details = this.$target.find(".details");
+    this.$detailsText = this.$details.find("span");
     this.$img = this.$target.find("img");
-    this.baseProjectHeight = this.$target.height();
-    this.$target.css({
-      height: this.baseProjectHeight * .6
-    });
+    this.baseProjectWidth = this.$target.width();
     this.$project.css({
+      width: this.baseProjectWidth * .6,
       opacity: 0
     });
     return this.$img.css({
-      opacity: 0
+      opacity: 0,
+      left: -10
     });
   };
 
   ProjectPreview.prototype.over = function() {
-    return console.log(this.$project);
+    TweenLite.to(this.$details, .3, {
+      bottom: 0,
+      easing: Quad.easeOut
+    });
+    return TweenLite.to(this.$detailsText, .3, {
+      autoAlpha: 1,
+      delay: .2,
+      easing: Quad.easeOut
+    });
   };
 
   ProjectPreview.prototype.out = function() {
-    return console.log("out");
+    TweenLite.to(this.$details, .3, {
+      bottom: -40,
+      easing: Quad.easeIn,
+      delay: .1
+    });
+    return TweenLite.to(this.$detailsText, .3, {
+      autoAlpha: 0,
+      easing: Quad.easeIn
+    });
   };
 
   ProjectPreview.prototype.show = function(delay) {
     this.projectTitle.show(delay);
     delay += .2;
-    TweenLite.to(this.target, .3, {
-      height: this.baseProjectHeight,
-      delay: delay,
-      easing: Cubic.easeOut
-    });
     TweenLite.to(this.$project, .3, {
+      width: this.baseProjectWidth,
       autoAlpha: 1,
-      delay: delay,
-      easing: Cubic.easeOut
-    });
-    return TweenLite.to(this.$img, .4, {
-      autoAlpha: 1,
-      delay: delay + .3,
+      delay: delay + .05,
       easing: Quad.easeOut
     });
+    return TweenLite.to(this.$img, .3, {
+      autoAlpha: 1,
+      left: 0,
+      delay: delay + .1,
+      easing: Quad.easeOut,
+      onComplete: this.activate
+    });
+  };
+
+  ProjectPreview.prototype.activate = function() {
+    return $(this.target).find("a").hover(this.over, this.out);
   };
 
   return ProjectPreview;

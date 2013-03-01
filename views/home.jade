@@ -32,7 +32,7 @@ block content
 							.content= skill
 
 		article.bot
-			.holder.animated
+			.holder
 				h4 MY <strong>PROJECTS:</strong>
 			ul
 				-for project in data
@@ -40,14 +40,15 @@ block content
 						a(href="/works/"+project.id)
 							.project_title
 								h3= project.title
-							span.project
-								img(src=project.preview, alt=project.title, width="300", height="150")
-								span.layer
-									span.background
-									span.bts
-										span.btzoom
-											span.circle
-											span.plus
-										span.bt VIEW MORE
-									span.details 
-										span FLASH - HTML
+							span.project_holder
+								span.project
+									img(src=project.preview, alt=project.title, width="300", height="150")
+									span.layer
+										span.background
+										span.bts
+											span.btzoom
+												span.circle
+												span.plus
+											span.bt VIEW MORE
+										span.details 
+											span FLASH - HTML

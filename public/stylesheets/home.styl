@@ -75,24 +75,28 @@
 				height 17px
 			h3				
 				font 14px Quicksand
-			.project
-				position relative
-				display	block
-				margin-top 2px
-				border 5px solid #fff
-				background #fff
-				width 290px
-				height 140px
-				.cnt
+			.project_holder
+				width w = 300px
+				height h = 140px
+				display block
+				.project
 					position relative
-					width 100%
-					height 100%
-				img
-					position absolute
-					width 290px
-					height 140px
-				span
-					display block
+					display	block
+					margin-top 2px
+					border 5px solid #fff
+					background #fff
+					width w
+					height h
+					.cnt
+						position relative
+						width 100%
+						height 100%
+					img
+						position absolute
+						width 290px
+						height h
+					span
+						display block
 			&:first-child
 				margin-left 0px
 		&>.bt

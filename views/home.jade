@@ -4,30 +4,30 @@ include mixins
 block content
 	section#home
 		article.top
-			.title.animated
+			.title
 				.content HEY!
 
 			.description
-				.holder.animated.d1
+				.holder.d1
 					.content I'M <h3>FLORIAN ZUMBRUNN</h3>,
-				.holder.animated.d2
+				.holder.d2
 					.content A <h2>CREATIVE DEVELOPER</h2>.
-				.holder.animated.d3
+				.holder.d3
 					.content <span>I LOVE TO CRAFT DIGITAL STUFF,</span>
-				.holder.animated.d4
+				.holder.d4
 					.content <span>I WORK IN PARIS.</span>
 
 			.skills
 				-var skills = [ "HTML5", "CSS3", "JADE", "JS", "COFFEESCRIPT", "SASS/STYLUS", "AS3", "FLASH REMOTING", "UNITY3D", "C#", "PYTHON", "PHP", "..." ]
 				-for skill, i in skills
 					if( i < skills.length - 1 )
-						.holder.animated(class="d" + ( i + 1 ))
+						.holder(class="d" + ( i + 1 ))
 							.emul= skill
 								/
 							.content= skill
 								/
 					else
-						.holder.animated(class="d" + ( i + 1 ))
+						.holder(class="d" + ( i + 1 ))
 							.emul= skill
 							.content= skill
 
@@ -38,17 +38,22 @@ block content
 				-for project in data
 					li
 						a(href="/works/"+project.id)
-							.project_title
-								h3= project.title
+							span.project_title
+								span.cnt
+									h3= project.title
 							span.project_holder
 								span.project
-									img(src=project.preview, alt=project.title, width="300", height="150")
+									span.cnt_img
+										img(src=project.preview, alt=project.title, width="300", height="150")
 									span.layer
 										span.background
 										span.bts
 											span.btzoom
 												span.circle
 												span.plus
-											span.bt VIEW MORE
+											span.bt
+												span.cnt
+													span.txt VIEW MORE
 										span.details 
-											span FLASH - HTML
+											span.cnt
+												span.txt FLASH - HTML

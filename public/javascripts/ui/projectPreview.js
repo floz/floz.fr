@@ -115,6 +115,7 @@ ProjectLayer = (function() {
     this.$btZoomCircle = this.$layer.find(".circle");
     this.$btZoomPlus = this.$layer.find(".plus");
     this.$bt = this.$layer.find(".bt");
+    this.$btTxt = this.$layer.find(".bt .txt");
     TweenLite.set(this.$btZoomCircle, {
       autoAlpha: 0,
       scale: .8
@@ -132,6 +133,9 @@ ProjectLayer = (function() {
 
   ProjectLayer.prototype.show = function(delay) {
     this.killTweens();
+    TweenLite.set(this.$btTxt, {
+      top: 10
+    });
     TweenLite.to(this.$bg, .4, {
       autoAlpha: 1,
       easing: Cubic.easeOut
@@ -153,6 +157,11 @@ ProjectLayer = (function() {
       x: 0,
       autoAlpha: 1,
       delay: .3,
+      easing: Cubic.easeOut
+    });
+    TweenLite.to(this.$btTxt, .2, {
+      top: 0,
+      delay: .45,
       easing: Cubic.easeOut
     });
     return this.details.show();
@@ -178,9 +187,14 @@ ProjectLayer = (function() {
       rotation: 20,
       easing: Cubic.easeIn
     });
-    return TweenLite.to(this.$bt, .2, {
+    TweenLite.to(this.$bt, .2, {
       x: 20,
       autoAlpha: 0,
+      delay: .15,
+      easing: Cubic.easeIn
+    });
+    return TweenLite.to(this.$btTxt, .2, {
+      top: 0,
       easing: Cubic.easeIn
     });
   };
@@ -189,7 +203,8 @@ ProjectLayer = (function() {
     TweenLite.killTweensOf(this.$bg);
     TweenLite.killTweensOf(this.$btZoomCircle);
     TweenLite.killTweensOf(this.$btZoomPlus);
-    return TweenLite.killTweensOf(this.$bt);
+    TweenLite.killTweensOf(this.$bt);
+    return TweenLite.killTweensOf(this.$btTxt);
   };
 
   return ProjectLayer;

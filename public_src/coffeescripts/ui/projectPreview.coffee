@@ -59,6 +59,7 @@ class ProjectLayer
 		@$btZoomCircle = @$layer.find ".circle"
 		@$btZoomPlus = @$layer.find ".plus"
 		@$bt = @$layer.find ".bt"
+		@$btTxt = @$layer.find ".bt .txt"
 
 		TweenLite.set @$btZoomCircle, { autoAlpha: 0, scale: .8 }
 		TweenLite.set @$btZoomPlus, { autoAlpha: 0, scale: .8, autoAlpha: 0, rotation: 20 }
@@ -66,10 +67,12 @@ class ProjectLayer
 
 	show: ( delay ) ->
 		@killTweens()
+		TweenLite.set @$btTxt, { top: 10 }
 		TweenLite.to @$bg, .4, { autoAlpha: 1, easing: Cubic.easeOut }
 		TweenLite.to @$btZoomCircle, .2, { autoAlpha: 1, scale: 1, delay: .2, easing: Cubic.easeOut }
 		TweenLite.to @$btZoomPlus, .2, { autoAlpha: 1, scale: 1, rotation: 0, delay: .3, easing: Cubic.easeOut }
 		TweenLite.to @$bt, .2, { x: 0, autoAlpha: 1, delay: .3, easing: Cubic.easeOut }
+		TweenLite.to @$btTxt, .2, { top: 0, delay: .45, easing: Cubic.easeOut }
 		@details.show()
 
 	hide: ( delay ) ->
@@ -78,13 +81,15 @@ class ProjectLayer
 		TweenLite.to @$bg, .4, { autoAlpha: 0, delay: .2, easing: Cubic.easeIn }
 		TweenLite.to @$btZoomCircle, .2, { autoAlpha: 0, scale: .8, delay: .05, easing: Cubic.easeIn }
 		TweenLite.to @$btZoomPlus, .2, { autoAlpha: 0, scale: .8, rotation: 20, easing: Cubic.easeIn }
-		TweenLite.to @$bt, .2, { x: 20, autoAlpha: 0, easing: Cubic.easeIn }
+		TweenLite.to @$bt, .2, { x: 20, autoAlpha: 0, delay: .15, easing: Cubic.easeIn }
+		TweenLite.to @$btTxt, .2, { top: 0, easing: Cubic.easeIn }
 
 	killTweens: ->
 		TweenLite.killTweensOf @$bg
 		TweenLite.killTweensOf @$btZoomCircle
 		TweenLite.killTweensOf @$btZoomPlus
 		TweenLite.killTweensOf @$bt
+		TweenLite.killTweensOf @$btTxt
 
 class ProjectDetails
 

@@ -243,8 +243,8 @@ section {
   position: relative;
   overflow: hidden;
   float: left;
-  margin-left: 9px;
-  height: 190px;
+  margin: 10px 6px 0 0;
+  height: 189px;
 }
 #home .bot li a {
   text-decoration: none;

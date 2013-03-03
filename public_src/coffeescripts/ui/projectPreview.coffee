@@ -2,19 +2,20 @@ class ProjectPreview
 
 	constructor: ( @target ) ->
 		@$target = $( @target )
-		@layer = new ProjectLayer( @$target.find ".layer" )
 		@projectTitle = new ProjectTitle( @$target.find ".project_title" )
+		@projectImg = new ProjectImg( @$target.find ".cnt_img" )
+		@layer = new ProjectLayer( @$target.find ".layer" )
 
 		@init()
 
 	init: ->
 		@$projectHolder = @$target.find ".project_holder"
 		@$project = @$target.find ".project"
-		@$img = @$target.find "img"
+		# @$img = @$target.find "img"
 
 		@baseProjectWidth = @$target.width()
 		@$project.css { width: @baseProjectWidth * .6, opacity: 0 }
-		@$img.css { opacity: 0, left: -10 }
+		# @$img.css { opacity: 0, left: -10 }
 
 	over: =>
 		@layer.show()
@@ -23,10 +24,11 @@ class ProjectPreview
 		@layer.hide()
 
 	show: ( delay ) ->
+		@projectImg.startLoad()
 		@projectTitle.show delay
 		delay += .2
 		TweenLite.to @$project, .3, { width: @baseProjectWidth, autoAlpha: 1, delay: delay + .05, easing: Quad.easeOut }
-		TweenLite.to @$img, .3, { autoAlpha: 1, left:0, delay: delay + .1, easing: Quad.easeOut, onComplete: @activate }
+		TweenLite.to @, delay + .4, { onComplete: @activate }
 
 	activate: =>
 		$( @target ).find( "a" ).hover @over, @out
@@ -44,8 +46,25 @@ class ProjectTitle
 		@$title.css { opacity: 0, width: @width * .4 }
 
 	show: ( delay ) ->
-		TweenLite.to @$title, .3, { autoAlpha: 1, width: @width + 2, delay: delay, easing: Cubic.easeOut }
+		TweenLite.to @$title, .3, { autoAlpha: 1, width: @width + 2, delay: delay, easing: Cubic.easeOut, onComplete: @onComplete }
 		TweenLite.to @$txt, .3, { top: 0, delay: delay + .2, easing: Cubic.easeOut }
+
+	onComplete: =>
+		@$cnt.css( { width: "auto" } )
+
+class ProjectImg
+
+	constructor: ( @$cntImg ) ->
+		@img = new Image()
+
+	startLoad: ->
+		@img.src = @$cntImg.attr( "data-url_img" )
+		$( @img ).load( @onImageLoaded )
+	
+	onImageLoaded: =>
+		$( @img ).css "opacity", 0
+		@$cntImg.append( @img )
+		TweenLite.to @img, .3, { opacity: 1, easing: Quad.easeOut }
 
 class ProjectLayer 
 

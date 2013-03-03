@@ -20,14 +20,14 @@ block content
 			.skills
 				-var skills = [ "HTML5", "CSS3", "JADE", "JS", "COFFEESCRIPT", "SASS/STYLUS", "AS3", "FLASH REMOTING", "UNITY3D", "C#", "PYTHON", "PHP", "..." ]
 				-for skill, i in skills
-					if( i < skills.length - 1 )
-						.holder(class="d" + ( i + 1 ))
+					-if( i < skills.length - 1 )
+						.holder
 							.emul= skill
 								/
 							.content= skill
 								/
-					else
-						.holder(class="d" + ( i + 1 ))
+					-else
+						.holder
 							.emul= skill
 							.content= skill
 
@@ -36,15 +36,16 @@ block content
 				h4 MY <strong>PROJECTS:</strong>
 			ul
 				-for project in data
-					li
+					li						
 						a(href="/works/"+project.id)
 							span.project_title
 								span.cnt
 									h3= project.title
 							span.project_holder
 								span.project
-									span.cnt_img
-										img(src=project.preview, alt=project.title, width="300", height="150")
+									span.cnt_img(data-url_img=project.preview)
+										noscript
+											img(src=project.preview, alt=project.title, width="300", height="150")
 									span.layer
 										span.background
 										span.bts

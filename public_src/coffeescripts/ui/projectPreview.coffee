@@ -2,32 +2,33 @@ class ProjectPreview
 
 	constructor: ( @target ) ->
 		@$target = $( @target )
+		@$project = @$target.find ".project"
+
 		@projectTitle = new ProjectTitle( @$target.find ".project_title" )
-		@projectImg = new ProjectImg( @$target.find ".cnt_img" )
+		@projectImg = new ProjectImg( @$target.find( ".cnt_img" ), @$project )
 		@layer = new ProjectLayer( @$target.find ".layer" )
 
 		@init()
 
 	init: ->
 		@$projectHolder = @$target.find ".project_holder"
-		@$project = @$target.find ".project"
-		# @$img = @$target.find "img"
 
 		@baseProjectWidth = @$target.width()
-		@$project.css { width: @baseProjectWidth * .6, opacity: 0 }
-		# @$img.css { opacity: 0, left: -10 }
+		@$project.css { opacity: 0 }
 
 	over: =>
+		@projectTitle.over()
 		@layer.show()
 
 	out: =>
+		@projectTitle.out()
 		@layer.hide()
 
 	show: ( delay ) ->
 		@projectImg.startLoad()
 		@projectTitle.show delay
 		delay += .2
-		TweenLite.to @$project, .3, { width: @baseProjectWidth, autoAlpha: 1, delay: delay + .05, easing: Quad.easeOut }
+		TweenLite.to @$project, .3, { autoAlpha: 1, delay: delay + .05, easing: Quad.easeOut }
 		TweenLite.to @, delay + .4, { onComplete: @activate }
 
 	activate: =>
@@ -40,31 +41,58 @@ class ProjectTitle
 		@$txt = @$title.find "h3"
 
 		@init()
-		
+	
+	over: ->
+		TweenLite.to @$title, .4, { backgroundColor: "#ff9c66", ease: Quad.easeOut }
+		TweenLite.to @$txt, .4, { color: "#fff", ease: Quad.easeOut }
+
+	out: ->
+		TweenLite.to @$title, .4, { backgroundColor: "#ffffff", ease: Quad.easeIn }
+		TweenLite.to @$txt, .4, { color: "#3d3944", ease: Quad.easeIn }
+
 	init: ->
-		@width = @$title.width()
+		@width = @$cnt.width()
 		@$title.css { opacity: 0, width: @width * .4 }
 
 	show: ( delay ) ->
-		TweenLite.to @$title, .3, { autoAlpha: 1, width: @width + 2, delay: delay, easing: Cubic.easeOut, onComplete: @onComplete }
+		TweenLite.to @$title, .3, { opacity: 1, width: @width + 2, delay: delay, easing: Cubic.easeOut, onComplete: @onComplete }
 		TweenLite.to @$txt, .3, { top: 0, delay: delay + .2, easing: Cubic.easeOut }
 
 	onComplete: =>
-		@$cnt.css( { width: "auto" } )
+		@$txt.css "width", "auto"
 
 class ProjectImg
 
-	constructor: ( @$cntImg ) ->
+	widthImgOrigin: 0
+	heightImgOrigin: 0
+
+	constructor: ( @$cntImg, @$ref ) ->
 		@img = new Image()
+		@$img = $( @img )
 
 	startLoad: ->
 		@img.src = @$cntImg.attr( "data-url_img" )
-		$( @img ).load( @onImageLoaded )
+		@$img.load( @onImageLoaded )
 	
 	onImageLoaded: =>
-		$( @img ).css "opacity", 0
+		@$img.css "opacity", 0
 		@$cntImg.append( @img )
-		TweenLite.to @img, .3, { opacity: 1, easing: Quad.easeOut }
+		@widthImgOrigin = @$img.width()
+		@heightImgOrigin = @$img.height()
+
+		$( window ).resize( @resize )
+		@resize()
+
+		TweenLite.to @img, .3, { autoAlpha: 1, easing: Quad.easeOut }
+
+	resize: =>
+		rw = @$ref.width() / @widthImgOrigin
+		rh = @$ref.height() / @heightImgOrigin
+		ratio = if ( rw > rh ) then rw else rh
+		@$img.width( @widthImgOrigin * ratio )
+		@$img.height( @heightImgOrigin * ratio )
+		@$img.css( { top: @$ref.height() - @$img.height() >> 1, left: @$ref.width() - @$img.width() >> 1 })
+
 
 class ProjectLayer 
 

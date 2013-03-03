@@ -22,11 +22,15 @@ class Home extends Module
 		$botTitle = $( "article.bot h4" )
 		TweenLite.to $botTitle, .4, { top: 0, delay: delay, ease: Quad.easeOut }
 
+		delayAdd = .2
 		$projects = $( "article.bot li" )
 		for i in [0...$projects.length] by 1
 			p = new ProjectPreview( $projects[ i ] )
 			p.show delay + .1
-			delay += .2
+			delay += delayAdd
+			delayAdd *= .92
+			if( delayAdd < .05 )
+				delayAdd = .05
 
 	hide: ->
 

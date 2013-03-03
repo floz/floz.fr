@@ -44,6 +44,8 @@
 		.bt
 			margin-bottom 20px
 	.bot
+		position relative
+		width 100%
 		border-top 1px dotted vgraylight
 		padding-top 20px
 		margin-bottom 100px
@@ -57,54 +59,219 @@
 				top 0
 		ul
 			overflow hidden
+			position relative
 			margin-top 10px
 		li
 			position relative
 			overflow hidden
 			float left
-			margin 10px 6px 0 0
-			height 189px
+			margin-top 10px
+			width (97.5/3)%
+			margin-right (2.5/2)%
+			height 180px
 			a
+				position relative
+				display block
+				width 100%
+				height 100%
 				text-decoration none
 				color vgraydark
-			.project_title
-				display block
-				background-color #fff
-				display inline-block
-				padding 10px
-				.cnt
+				span
 					display block
+			.project_title
+				background-color #fff
+				display block
+				padding 10px
+				height 17px
+				width auto
+				.cnt
+					display inline-block
 					height 17px
+					width auto
 					overflow hidden
 			h3
 				position relative
+				width auto
 				top 14px		
 				font 14px Quicksand
 			.project_holder
-				width w = 300px
-				height h = 140px
-				display block
-				.project
+				position relative
+				overflow hidden
+				height 140px
+				margin-top 3px
+			.project
+				position relative
+				display	block
+				width 100%
+				height 100%
+				background #fff
+			.cnt_img
+				position absolute
+				overflow hidden
+				margin-top m = 1.5%
+				margin-left m
+				width 100% - m * 2
+				height 100% - m * 4
+				img
+					position absolute
+			.layer
+				position absolute
+				width 100%
+				height 140px
+				.background
+					position absolute
+					background-color rgba(117, 109, 131, .7)
+					margin-top m = 1.5%
+					margin-left m
+					width 100% - m * 2
+					height 100% - m * 4
+					opacity 0
+				.bts
 					position relative
-					display	block
-					margin-top 2px
-					border 5px solid #fff
-					background #fff
-					width w
-					height h
-					.cnt_img
+					margin auto
+					width 150px
+					height 60px
+					margin-top 30px
+				.btzoom
+					position relative
+					float left
+					width 56px
+					height 56px
+					.circle
 						position absolute
-						display block
-						width w = 290px
-						height h
+						width 58px
+						height 58px
+						background-color rgba(255, 255, 255, .3)
+						border-radius 28px
+						transform-origin 50% 50%
+						backface-visibility hidden
+						opacity 0
+					.plus
+						position absolute
+						background-image url( "../images/icon_plus.png" )
+						width 40px
+						height 40px
+						top 9px
+						left 9px
+						opacity 0
+						transform-origin 50% 50%
+						backface-visibility hidden
+				.bt
+					float left
+					background-color vorange
+					margin-top 14px
+					margin-left 13px
+					opacity 0
+					.cnt
+						width auto
+						height 10px
 						overflow hidden
-						img
-							position absolute
-							width 290px
-							height h
-					span
-						display block
-			&:first-child
-				margin-left 0px
+					.txt
+						color #fff
+						font-size 10px
+						top 10px
+						position relative
+				.details
+					position absolute
+					bottom -40px
+					background-color #fff
+					height 40px
+					width 100%
+					.cnt
+						height 11px
+						width auto
+						padding-left 10px
+						padding-top 14px
+						overflow hidden
+					.txt
+						position relative
+						font 11px "Times New Roman"
+						color vgraylight
+						top 11px
 		&>.bt
 			margin-top 10px
+
+#home
+	@media( min-width: 768px )
+		.bot
+			for idx in 0..30
+				if( idx % 3 == 2 )
+					ul
+						li:nth-child({idx+1})
+							margin-right 0
+	@media( max-width: 768px )
+		.top
+			.title
+				font-size s = 42px
+				line-height s
+				height s 
+			.description 
+				font-size s = 32px
+				line-height s
+				.holder
+					height s
+			.skills
+				font-size s = 22px
+				.holder
+					height s + 5
+		.bot
+			.holder
+				height s = 22px
+				h4
+					font-size s
+			li
+				width (97.5/2)%
+				margin-right (2.5)%
+				h3
+					font-size 12px
+			for idx in 0..30
+				if( idx % 2 == 1 )
+					ul
+						li:nth-child({idx+1})
+							margin-right 0
+	@media( max-width: 480px )
+		.top
+			.title
+				font-size s = 32px
+				line-height s
+				height s 
+			.description 
+				font-size s = 24px
+				line-height s
+				.holder
+					height s
+			.skills
+				font-size s = 14px
+				.holder
+					height s + 5
+		.bot
+			.holder
+				height s = 18px
+				h4
+					font-size s
+			ul
+				margin-top 0
+			li
+				width 97.5%
+				margin-right 0
+	@media( max-width: 380px )
+		.top
+			.title
+				font-size s = 22px
+				line-height s
+				height s 
+			.description 
+				font-size s = 18px
+				line-height s
+				.holder
+					height s
+			.skills
+				font-size s = 10px
+				.holder
+					height s + 5
+		.bot
+			.holder
+				height s = 14px
+				h4
+					font-size s	
+	

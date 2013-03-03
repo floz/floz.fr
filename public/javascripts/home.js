@@ -45,19 +45,26 @@ Home = (function(_super) {
   };
 
   showBot = function(delay) {
-    var $botTitle, $projects, i, p, _i, _ref, _results;
+    var $botTitle, $projects, delayAdd, i, p, _i, _ref, _results;
     $botTitle = $("article.bot h4");
     TweenLite.to($botTitle, .4, {
       top: 0,
       delay: delay,
       ease: Quad.easeOut
     });
+    delayAdd = .2;
     $projects = $("article.bot li");
     _results = [];
     for (i = _i = 0, _ref = $projects.length; _i < _ref; i = _i += 1) {
       p = new ProjectPreview($projects[i]);
       p.show(delay + .1);
-      _results.push(delay += .2);
+      delay += delayAdd;
+      delayAdd *= .92;
+      if (delayAdd < .05) {
+        _results.push(delayAdd = .05);
+      } else {
+        _results.push(void 0);
+      }
     }
     return _results;
   };

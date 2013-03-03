@@ -10,27 +10,28 @@ ProjectPreview = (function() {
     this.out = __bind(this.out, this);
     this.over = __bind(this.over, this);
     this.$target = $(this.target);
+    this.$project = this.$target.find(".project");
     this.projectTitle = new ProjectTitle(this.$target.find(".project_title"));
-    this.projectImg = new ProjectImg(this.$target.find(".cnt_img"));
+    this.projectImg = new ProjectImg(this.$target.find(".cnt_img"), this.$project);
     this.layer = new ProjectLayer(this.$target.find(".layer"));
     this.init();
   }
 
   ProjectPreview.prototype.init = function() {
     this.$projectHolder = this.$target.find(".project_holder");
-    this.$project = this.$target.find(".project");
     this.baseProjectWidth = this.$target.width();
     return this.$project.css({
-      width: this.baseProjectWidth * .6,
       opacity: 0
     });
   };
 
   ProjectPreview.prototype.over = function() {
+    this.projectTitle.over();
     return this.layer.show();
   };
 
   ProjectPreview.prototype.out = function() {
+    this.projectTitle.out();
     return this.layer.hide();
   };
 
@@ -39,7 +40,6 @@ ProjectPreview = (function() {
     this.projectTitle.show(delay);
     delay += .2;
     TweenLite.to(this.$project, .3, {
-      width: this.baseProjectWidth,
       autoAlpha: 1,
       delay: delay + .05,
       easing: Quad.easeOut
@@ -67,8 +67,30 @@ ProjectTitle = (function() {
     this.init();
   }
 
+  ProjectTitle.prototype.over = function() {
+    TweenLite.to(this.$title, .4, {
+      backgroundColor: "#ff9c66",
+      ease: Quad.easeOut
+    });
+    return TweenLite.to(this.$txt, .4, {
+      color: "#fff",
+      ease: Quad.easeOut
+    });
+  };
+
+  ProjectTitle.prototype.out = function() {
+    TweenLite.to(this.$title, .4, {
+      backgroundColor: "#ffffff",
+      ease: Quad.easeIn
+    });
+    return TweenLite.to(this.$txt, .4, {
+      color: "#3d3944",
+      ease: Quad.easeIn
+    });
+  };
+
   ProjectTitle.prototype.init = function() {
-    this.width = this.$title.width();
+    this.width = this.$cnt.width();
     return this.$title.css({
       opacity: 0,
       width: this.width * .4
@@ -77,7 +99,7 @@ ProjectTitle = (function() {
 
   ProjectTitle.prototype.show = function(delay) {
     TweenLite.to(this.$title, .3, {
-      autoAlpha: 1,
+      opacity: 1,
       width: this.width + 2,
       delay: delay,
       easing: Cubic.easeOut,
@@ -91,9 +113,7 @@ ProjectTitle = (function() {
   };
 
   ProjectTitle.prototype.onComplete = function() {
-    return this.$cnt.css({
-      width: "auto"
-    });
+    return this.$txt.css("width", "auto");
   };
 
   return ProjectTitle;
@@ -102,23 +122,47 @@ ProjectTitle = (function() {
 
 ProjectImg = (function() {
 
-  function ProjectImg($cntImg) {
+  ProjectImg.prototype.widthImgOrigin = 0;
+
+  ProjectImg.prototype.heightImgOrigin = 0;
+
+  function ProjectImg($cntImg, $ref) {
     this.$cntImg = $cntImg;
+    this.$ref = $ref;
+    this.resize = __bind(this.resize, this);
     this.onImageLoaded = __bind(this.onImageLoaded, this);
     this.img = new Image();
+    this.$img = $(this.img);
   }
 
   ProjectImg.prototype.startLoad = function() {
     this.img.src = this.$cntImg.attr("data-url_img");
-    return $(this.img).load(this.onImageLoaded);
+    return this.$img.load(this.onImageLoaded);
   };
 
   ProjectImg.prototype.onImageLoaded = function() {
-    $(this.img).css("opacity", 0);
+    this.$img.css("opacity", 0);
     this.$cntImg.append(this.img);
+    this.widthImgOrigin = this.$img.width();
+    this.heightImgOrigin = this.$img.height();
+    $(window).resize(this.resize);
+    this.resize();
     return TweenLite.to(this.img, .3, {
-      opacity: 1,
+      autoAlpha: 1,
       easing: Quad.easeOut
+    });
+  };
+
+  ProjectImg.prototype.resize = function() {
+    var ratio, rh, rw;
+    rw = this.$ref.width() / this.widthImgOrigin;
+    rh = this.$ref.height() / this.heightImgOrigin;
+    ratio = rw > rh ? rw : rh;
+    this.$img.width(this.widthImgOrigin * ratio);
+    this.$img.height(this.heightImgOrigin * ratio);
+    return this.$img.css({
+      top: this.$ref.height() - this.$img.height() >> 1,
+      left: this.$ref.width() - this.$img.width() >> 1
     });
   };
 

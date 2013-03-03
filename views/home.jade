@@ -1,0 +1,60 @@
+extends layout
+include mixins
+
+block content
+	section#home
+		article.top
+			.title
+				.content HEY!
+
+			.description
+				.holder
+					.content I'M <h3>FLORIAN ZUMBRUNN</h3>,
+				.holder
+					.content A <h2>CREATIVE DEVELOPER</h2>.
+				.holder
+					.content <span>I LOVE</span>
+				.holder
+					.content <span>TO CRAFT DIGITAL STUFF.</span>
+
+			.skills
+				-var skills = [ "HTML5", "CSS3", "JADE", "JS", "COFFEESCRIPT", "SASS/STYLUS", "AS3", "FLASH REMOTING", "UNITY3D", "C#", "PYTHON", "PHP", "..." ]
+				-for skill, i in skills
+					-if( i < skills.length - 1 )
+						.holder
+							.emul= skill
+								/
+							.content= skill
+								/
+					-else
+						.holder
+							.emul= skill
+							.content= skill
+
+		article.bot
+			.holder
+				h4 MY <strong>PROJECTS:</strong>
+			ul
+				-for project in data
+					li						
+						a(href="/works/"+project.id)
+							span.project_title
+								span.cnt
+									h3= project.title
+							span.project_holder
+								span.project
+									span.cnt_img(data-url_img=project.preview)
+										noscript
+											img(src=project.preview, alt=project.title, width="300", height="150")
+									span.layer
+										span.background
+										span.bts
+											span.btzoom
+												span.circle
+												span.plus
+											span.bt
+												span.cnt
+													span.txt VIEW MORE
+										span.details 
+											span.cnt
+												span.txt FLASH - HTML

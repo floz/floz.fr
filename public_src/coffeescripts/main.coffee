@@ -1,4 +1,8 @@
+$( window ).load ->
+	console.log "window load"
+
 $( document ).ready ->
+	console.log "document ready"
 	init()
 
 init = ->

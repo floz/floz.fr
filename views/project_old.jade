@@ -1,0 +1,28 @@
+extends layout
+include mixins
+
+block content
+	article#project
+		.top
+			mixin bt( "BACK", "/works" )
+			h3.title= data.title
+			.left
+				h3.subtitle= data.subtitle
+				h2.jobs 
+					-for job in data.jobs
+						p= job
+				.technos= data.technos
+
+				mixin bt( "> VISIT", data.url )
+			.right
+				-for desc in data.description
+					p= desc
+		.bot
+			.left
+				.slides
+			.right
+				.controls
+					.bts
+						mixin bt( "NEXT >", "#" )
+						mixin bt( "< PREV", "#" )
+					.pagination 2/5

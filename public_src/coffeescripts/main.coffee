@@ -1,8 +1,5 @@
-$( window ).load ->
-	console.log "window load"
-
 $( document ).ready ->
-	console.log "document ready"
+	document.body.style.opacity = 1
 	init()
 
 init = ->

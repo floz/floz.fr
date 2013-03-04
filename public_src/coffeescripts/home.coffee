@@ -1,7 +1,7 @@
 class Home extends Module
 
 	init: ->
-		for element in [ $( "article.top .content" ), $( "article.bot h4" ) ]
+		for element in [ $( ".scrolling_content" ) ]
 			element = $( element )
 			element.css { "top": element.height() }
 		
@@ -12,14 +12,14 @@ class Home extends Module
 
 	showTop = ->
 		delay = 0
-		contents = $( "article.top .content" )
+		contents = $( "article.top .scrolling_content" )
 		for element in contents
 			TweenLite.to element, .4, { top: 0, delay: delay, ease: Quad.easeOut }
 			delay += 0.075
 		delay
 
 	showBot = ( delay ) ->
-		$botTitle = $( "article.bot h4" )
+		$botTitle = $( "article.bot .scrolling_content" )
 		TweenLite.to $botTitle, .4, { top: 0, delay: delay, ease: Quad.easeOut }
 
 		delayAdd = .2
@@ -34,4 +34,4 @@ class Home extends Module
 
 	hide: ->
 
-new Home
+new Home()

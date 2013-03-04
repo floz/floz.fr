@@ -4,7 +4,7 @@ class ProjectPreview
 		@$target = $( @target )
 		@$project = @$target.find ".project"
 
-		@projectTitle = new ProjectTitle( @$target.find ".project_title" )
+		@projectTitle = new ProjectTitle( @$target.find ".cnt_project_title" )
 		@projectImg = new ProjectImg( @$target.find( ".cnt_img" ), @$project )
 		@layer = new ProjectLayer( @$target.find ".layer" )
 
@@ -38,7 +38,7 @@ class ProjectTitle
 
 	constructor: ( @$title ) ->
 		@$cnt = @$title.find ".cnt"
-		@$txt = @$title.find "h3"
+		@$txt = @$title.find ".project_title"
 
 		@init()
 	

@@ -2,3 +2,53 @@ extends layout
 include mixins
 
 block content
+	section#project
+		article.top
+			#page_title
+				.content= data.title
+			#page_description
+				- for subtitle in data.subtitles
+					.holder
+						.scrolling_content= subtitle
+			#skills
+				- for job, i in data.jobs
+					.holder
+						-if( i < data.jobs.length - 1 )
+							.emul= job
+								/
+							.scrolling_content= job
+								/
+						-else
+							.emul= job
+							.scrolling_content= job
+
+				- for techno, i in data.technos
+					.holder
+						-if( i < data.technos.length - 1 )
+							.emul= techno
+								/
+							.scrolling_content= techno
+								/
+						-else
+							.emul= techno
+							.scrolling_content= techno
+		article.bot
+			#diaporama
+				ul
+					- for image in data.images
+						li
+							img(src=image, alt="project image of #{data.title}")
+				#controls
+					.bt.prev
+						mixin bt( "PREV", "#prev" )
+					#pagination
+						#pagination_current_idx 0
+						span /
+						#pagination_count= data.images.length
+					.bt.next
+						mixin bt( "NEXT", "#next" )
+			#project_description
+				- for content in data.contents
+					.description
+						.title= content.title
+						.content= content.content

@@ -14,7 +14,7 @@ ProjectPreview = (function() {
 
     this.$target = $(this.target);
     this.$project = this.$target.find(".project");
-    this.projectTitle = new ProjectTitle(this.$target.find(".project_title"));
+    this.projectTitle = new ProjectTitle(this.$target.find(".cnt_project_title"));
     this.projectImg = new ProjectImg(this.$target.find(".cnt_img"), this.$project);
     this.layer = new ProjectLayer(this.$target.find(".layer"));
     this.init();
@@ -67,7 +67,7 @@ ProjectTitle = (function() {
     this.onComplete = __bind(this.onComplete, this);
 
     this.$cnt = this.$title.find(".cnt");
-    this.$txt = this.$title.find("h3");
+    this.$txt = this.$title.find(".project_title");
     this.init();
   }
 

@@ -1,52 +1,4 @@
-#home
-	.top
-		font-weight bold
-		h2, h3
-			display inline
-		h3
-			color vgraydark
-		h2
-			color vorange
-		.title
-			position relative
-			font-size 58px
-			line-height 54px
-			height 54px
-			overflow hidden
-			.content
-				position absolute	
-		.description
-			font-size 48px
-			line-height 44px
-			.holder
-				position relative
-				overflow hidden
-				height 44px
-				.content
-					position absolute
-				&.small
-					height h = 40px
-					font-size h
-					line-height h
-		.skills
-			position relative
-			overflow hidden
-			font-size h = 28px
-			font-weight 300
-			color vgrayviolet
-			margin-top 5px
-			margin-bottom 8px
-			.holder
-				position relative
-				float left
-				overflow hidden
-				height h = h + 5
-				.emul
-					visibility hidden
-				.content
-					position absolute
-		.bt
-			margin-bottom 20px
+#home	
 	.bot
 		position relative
 		width 100%
@@ -82,7 +34,7 @@
 				color vgraydark
 				span
 					display block
-			.project_title
+			.cnt_project_title
 				background-color #fff
 				display block
 				padding 10px
@@ -93,11 +45,11 @@
 					height 17px
 					width auto
 					overflow hidden
-			h3
-				position relative
-				width auto
-				top 14px		
-				font 14px Quicksand
+				.project_title
+					position relative
+					width auto
+					top 14px		
+					font 14px Quicksand
 			.project_holder
 				position relative
 				overflow hidden
@@ -204,24 +156,23 @@
 						li:nth-child({idx+1})
 							margin-right 0
 	@media( max-width: 768px )
-		.top
-			.title
-				font-size s = 42px
-				line-height s
-				height s 
-			.description 
-				font-size s = 32px
-				line-height s
-				.holder
-					height s
-					&.small
-						height h = 26px
-						font-size h
-						line-height h
-			.skills
-				font-size s = 22px
-				.holder
-					height s + 5
+		#page_title
+			font-size s = 42px
+			line-height s
+			height s 
+		#page_description
+			font-size s = 32px
+			line-height s
+			.holder
+				height s
+				&.small
+					height h = 26px
+					font-size h
+					line-height h
+		#skills
+			font-size s = 22px
+			.holder
+				height s + 5
 		.bot
 			.holder
 				height s = 22px
@@ -238,24 +189,23 @@
 						li:nth-child({idx+1})
 							margin-right 0
 	@media( max-width: 480px )
-		.top
-			.title
-				font-size s = 32px
-				line-height s
-				height s 
-			.description 
-				font-size s = 24px
-				line-height s
-				.holder
-					height s
-					&.small
-						height h = 18px
-						font-size h
-						line-height h
-			.skills
-				font-size s = 14px
-				.holder
-					height s + 5
+		#page_title
+			font-size s = 32px
+			line-height s
+			height s 
+		#page_description
+			font-size s = 24px
+			line-height s
+			.holder
+				height s
+				&.small
+					height h = 18px
+					font-size h
+					line-height h
+		#skills
+			font-size s = 14px
+			.holder
+				height s + 5
 		.bot
 			.holder
 				height s = 18px
@@ -267,27 +217,26 @@
 				width 97.5%
 				margin-right 0
 	@media( max-width: 380px )
-		.top
-			.title
-				font-size s = 22px
-				line-height s
-				height s 
-			.description 
-				font-size s = 18px
-				line-height s
-				.holder
-					height s
-					&.small
-						height h = 14px
-						font-size h
-						line-height h
-			.skills
-				font-size s = 10px
-				.holder
-					height s + 5
+		#page_title
+			font-size s = 22px
+			line-height s
+			height s 
+		#page_description
+			font-size s = 18px
+			line-height s
+			.holder
+				height s
+				&.small
+					height h = 14px
+					font-size h
+					line-height h
+		#skills
+			font-size s = 10px
+			.holder
+				height s + 5
 		.bot
 			.holder
 				height s = 14px
 				h4
-					font-size s	
+					font-size s
 	

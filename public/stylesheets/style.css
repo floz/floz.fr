@@ -31,6 +31,67 @@ section {
   max-width: 920px;
   margin: auto;
 }
+#page_title {
+  position: relative;
+  font-size: 58px;
+  line-height: 54px;
+  height: 54px;
+  overflow: hidden;
+}
+#page_title .scrolling_content {
+  position: absolute;
+}
+#page_description {
+  font-size: 48px;
+  line-height: 44px;
+}
+#page_description .holder {
+  position: relative;
+  overflow: hidden;
+  height: 44px;
+}
+#page_description .holder .scrolling_content {
+  position: absolute;
+}
+#page_description .holder.small {
+  height: 40px;
+  font-size: 40px;
+  line-height: 40px;
+}
+#skills {
+  position: relative;
+  overflow: hidden;
+  font-size: 28px;
+  font-weight: 300;
+  color: #a59ab9;
+  margin-top: 5px;
+  margin-bottom: 8px;
+}
+#skills .holder {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  height: 33px;
+}
+#skills .holder .emul {
+  visibility: hidden;
+}
+#skills .holder .scrolling_content {
+  position: absolute;
+}
+.top {
+  font-weight: bold;
+}
+.top h2,
+.top h3 {
+  display: inline;
+}
+.top h3 {
+  color: #3d3944;
+}
+.top h2 {
+  color: #ff9c66;
+}
 #menu {
   padding-bottom: 20px;
   border-bottom: 1px dotted #c0c0c0;
@@ -50,70 +111,6 @@ section {
 }
 #menu li:first-child {
   margin-left: 0px;
-}
-#home .top {
-  font-weight: bold;
-}
-#home .top h2,
-#home .top h3 {
-  display: inline;
-}
-#home .top h3 {
-  color: #3d3944;
-}
-#home .top h2 {
-  color: #ff9c66;
-}
-#home .top .title {
-  position: relative;
-  font-size: 58px;
-  line-height: 54px;
-  height: 54px;
-  overflow: hidden;
-}
-#home .top .title .content {
-  position: absolute;
-}
-#home .top .description {
-  font-size: 48px;
-  line-height: 44px;
-}
-#home .top .description .holder {
-  position: relative;
-  overflow: hidden;
-  height: 44px;
-}
-#home .top .description .holder .content {
-  position: absolute;
-}
-#home .top .description .holder.small {
-  height: 40px;
-  font-size: 40px;
-  line-height: 40px;
-}
-#home .top .skills {
-  position: relative;
-  overflow: hidden;
-  font-size: 28px;
-  font-weight: 300;
-  color: #a59ab9;
-  margin-top: 5px;
-  margin-bottom: 8px;
-}
-#home .top .skills .holder {
-  position: relative;
-  float: left;
-  overflow: hidden;
-  height: 33px;
-}
-#home .top .skills .holder .emul {
-  visibility: hidden;
-}
-#home .top .skills .holder .content {
-  position: absolute;
-}
-#home .top .bt {
-  margin-bottom: 20px;
 }
 #home .bot {
   position: relative;
@@ -157,20 +154,20 @@ section {
 #home .bot li a span {
   display: block;
 }
-#home .bot li .project_title {
+#home .bot li .cnt_project_title {
   background-color: #fff;
   display: block;
   padding: 10px;
   height: 17px;
   width: auto;
 }
-#home .bot li .project_title .cnt {
+#home .bot li .cnt_project_title .cnt {
   display: inline-block;
   height: 17px;
   width: auto;
   overflow: hidden;
 }
-#home .bot li h3 {
+#home .bot li .cnt_project_title .project_title {
   position: relative;
   width: auto;
   top: 14px;
@@ -345,27 +342,27 @@ section {
   }
 }
 @media ( max-width: 768px ) {
-  #home .top .title {
+  #home #page_title {
     font-size: 42px;
     line-height: 42px;
     height: 42px;
   }
-  #home .top .description {
+  #home #page_description {
     font-size: 32px;
     line-height: 32px;
   }
-  #home .top .description .holder {
+  #home #page_description .holder {
     height: 32px;
   }
-  #home .top .description .holder.small {
+  #home #page_description .holder.small {
     height: 26px;
     font-size: 26px;
     line-height: 26px;
   }
-  #home .top .skills {
+  #home #skills {
     font-size: 22px;
   }
-  #home .top .skills .holder {
+  #home #skills .holder {
     height: 27px;
   }
   #home .bot .holder {
@@ -428,27 +425,27 @@ section {
   }
 }
 @media ( max-width: 480px ) {
-  #home .top .title {
+  #home #page_title {
     font-size: 32px;
     line-height: 32px;
     height: 32px;
   }
-  #home .top .description {
+  #home #page_description {
     font-size: 24px;
     line-height: 24px;
   }
-  #home .top .description .holder {
+  #home #page_description .holder {
     height: 24px;
   }
-  #home .top .description .holder.small {
+  #home #page_description .holder.small {
     height: 18px;
     font-size: 18px;
     line-height: 18px;
   }
-  #home .top .skills {
+  #home #skills {
     font-size: 14px;
   }
-  #home .top .skills .holder {
+  #home #skills .holder {
     height: 19px;
   }
   #home .bot .holder {
@@ -466,27 +463,27 @@ section {
   }
 }
 @media ( max-width: 380px ) {
-  #home .top .title {
+  #home #page_title {
     font-size: 22px;
     line-height: 22px;
     height: 22px;
   }
-  #home .top .description {
+  #home #page_description {
     font-size: 18px;
     line-height: 18px;
   }
-  #home .top .description .holder {
+  #home #page_description .holder {
     height: 18px;
   }
-  #home .top .description .holder.small {
+  #home #page_description .holder.small {
     height: 14px;
     font-size: 14px;
     line-height: 14px;
   }
-  #home .top .skills {
+  #home #skills {
     font-size: 10px;
   }
-  #home .top .skills .holder {
+  #home #skills .holder {
     height: 15px;
   }
   #home .bot .holder {
@@ -594,76 +591,6 @@ section {
   -ms-filter: none;
   filter: none;
 }
-#project .top,
-#project .bot {
-  overflow: hidden;
-}
-#project .left,
-#project .right {
-  float: left;
-}
-#project .top {
-  margin-top: 15px;
-  border-bottom: 1px dotted #756d83;
-}
-#project .top * {
-  margin-bottom: 10px;
-}
-#project .top .left {
-  width: 300px;
-}
-#project .top .left p {
-  margin: 0;
-}
-#project .top .left .bt {
-  margin-top: 5px;
-}
-#project .top .title {
-  font: 28px Georgia;
-  font-weight: bold;
-  color: #756d83;
-}
-#project .top .subtitle,
-#project .top .jobs,
-#project .top .technos {
-  font: 18px Georgia;
-  font-weight: bold;
-  color: #3d3944;
-}
-#project .top .jobs {
-  color: #ff9c66;
-}
-#project .top .technos {
-  color: #a59ab9;
-}
-#project .top .right {
-  width: 300px;
-  font: 14px Georgia;
-  font-weight: bold;
-  color: #756d83;
-}
-#project .bot {
-  position: relative;
-  height: 400px;
-  margin-top: 20px;
-}
-#project .bot .slides {
-  width: 600px;
-  height: 400px;
-  background-color: #f0f;
-}
-#project .bot .bt {
+#project {
   display: block;
-  margin-bottom: 5px;
-}
-#project .bot .right {
-  margin-left: 10px;
-}
-#project .bot .pagination {
-  text-align: center;
-  font: 34px Georgia;
-  font-weight: normal;
-  color: #a59ab9;
-  margin-top: 10px;
-  border-top: 1px dotted #756d83;
 }

@@ -14,7 +14,7 @@ Home = (function(_super) {
 
   Home.prototype.init = function() {
     var element, _i, _len, _ref;
-    _ref = [$("article.top .content"), $("article.bot h4")];
+    _ref = [$(".scrolling_content")];
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       element = _ref[_i];
       element = $(element);
@@ -31,7 +31,7 @@ Home = (function(_super) {
   showTop = function() {
     var contents, delay, element, _i, _len;
     delay = 0;
-    contents = $("article.top .content");
+    contents = $("article.top .scrolling_content");
     for (_i = 0, _len = contents.length; _i < _len; _i++) {
       element = contents[_i];
       TweenLite.to(element, .4, {
@@ -46,7 +46,7 @@ Home = (function(_super) {
 
   showBot = function(delay) {
     var $botTitle, $projects, delayAdd, i, p, _i, _ref, _results;
-    $botTitle = $("article.bot h4");
+    $botTitle = $("article.bot .scrolling_content");
     TweenLite.to($botTitle, .4, {
       top: 0,
       delay: delay,
@@ -75,4 +75,4 @@ Home = (function(_super) {
 
 })(Module);
 
-new Home;
+new Home();

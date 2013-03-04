@@ -28,3 +28,53 @@ section
 	width 95%
 	max-width 920px
 	margin auto
+
+#page_title
+	position relative
+	font-size 58px
+	line-height 54px
+	height 54px
+	overflow hidden
+	.scrolling_content
+		position absolute
+
+#page_description
+	font-size 48px
+	line-height 44px
+	.holder
+		position relative
+		overflow hidden
+		height 44px
+		forcegpu()
+		.scrolling_content
+			position absolute
+		&.small
+			height h = 40px
+			font-size h
+			line-height h
+#skills
+	position relative
+	overflow hidden
+	font-size h = 28px
+	font-weight 300
+	color vgrayviolet
+	margin-top 5px
+	margin-bottom 8px
+	.holder
+		position relative
+		float left
+		overflow hidden
+		height h = h + 5
+		.emul
+			visibility hidden
+		.scrolling_content
+			position absolute
+
+.top
+	font-weight bold
+	h2, h3
+		display inline
+	h3
+		color vgraydark
+	h2
+		color vorange

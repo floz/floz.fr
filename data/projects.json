@@ -3,7 +3,7 @@
 		{
 			"id": "one_piece",
 			"title": "ONE PIECE",
-			"subtitles": [ "THE CONTEST WEBSITE", "WITH GREAT ANIMATIONS", "FOR THE ONE PIECE GAME" ],
+			"subtitles": [ "THE CONTEST WEBSITE", "WITH GREAT ANIMATIONS FOR", "THE ONE PIECE GAME" ],
 			"jobs": [ "LEAD DEVELOPER", "PROJECT MANAGER" ],
 			"technos": [ "HTML", "FLASH", "JS" ],
 			"preview": "images/preview.jpg",

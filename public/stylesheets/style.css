@@ -496,15 +496,66 @@ article.top h2 {
 #project {
   display: block;
 }
-#project #page_description {
-  font-size: 42px;
-  line-height: 44px;
+#project .top {
+  overflow: hidden;
+}
+#project .top .left,
+#project .top .right {
+  float: left;
+}
+#project .top .left {
+  width: 30%;
+  margin-right: 4%;
+}
+#project .top .right {
+  width: 30%;
+}
+#page_title {
+  font-size: 28px;
+  height: 28px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+#page_description {
+  color: #3d3944;
+  margin-bottom: 10px;
+}
+#page_description .holder {
+  margin-bottom: 2px;
+}
+#page_description,
+#skills {
+  font-size: 18px;
+  line-height: 20px;
+}
+#page_description .holder,
+#skills .holder {
+  height: 18px;
+}
+#skills {
+  margin-bottom: 10px;
 }
 #skills .title {
   margin-right: 10px;
 }
 #skills .cnt {
   overflow: hidden;
+}
+#skills .jobs {
+  color: #ff9c66;
+  margin-bottom: 10px;
+}
+#bt_visit {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#project_description {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 38px;
+}
+#project_description .description {
+  margin-bottom: 10px;
 }
 #diaporama {
   position: relative;
@@ -542,7 +593,10 @@ article.top h2 {
   margin-bottom: 4px;
 }
 #diaporama_controls #pagination {
+  text-align: center;
   line-height: 50px;
+  font-size: 34px;
+  color: #a59ab9;
 }
 #diaporama_controls #pagination * {
   display: inline-block;

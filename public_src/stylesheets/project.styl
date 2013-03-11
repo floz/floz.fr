@@ -1,14 +1,50 @@
 #project
 	display block
-	#page_description
-		font-size 42px
-		line-height 44px
+	.top
+		overflow hidden
+		.left, .right 
+			float left
+		.left
+			width 30%
+			margin-right 4%
+		.right 
+			width 30%
+#page_title
+	font-size h = 28px
+	height h
+	line-height h + 2px
+	margin-bottom 10px
+#page_description
+	color #3d3944
+	margin-bottom 10px
+	.holder
+		margin-bottom 2px
+#page_description, #skills
+	font-size h = 18px
+	line-height h + 2px
+	.holder
+		height h
 
 #skills
+	margin-bottom 10px
 	.title
 		margin-right 10px
 	.cnt
 		overflow hidden
+	.jobs
+		color #ff9c66
+		margin-bottom 10px
+
+#bt_visit
+	margin-top 20px
+	margin-bottom 20px
+
+#project_description
+	font-size 14px
+	font-weight 400
+	margin-top 38px
+	.description
+		margin-bottom 10px
 
 #diaporama
 	position relative
@@ -23,8 +59,6 @@
 		height 380px
 		overflow hidden
 		background-color #ff00ff
-	// li
-	// 	position absolute
 
 #diaporama_controls
 	position relative
@@ -43,6 +77,9 @@
 	.prev
 		margin-bottom 4px
 	#pagination 
+		text-align center
 		line-height 50px
+		font-size 34px
+		color #a59ab9
 		*
 			display inline-block

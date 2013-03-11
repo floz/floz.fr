@@ -3,7 +3,7 @@
 		{
 			"id": "one_piece",
 			"title": "ONE PIECE",
-			"subtitles": [ "THE CONTEST WEBSITE", "WITH GREAT ANIMATIONS FOR", "THE ONE PIECE GAME" ],
+			"subtitles": [ "DEVELOPMENT OF", "THE LAUNCHING WEBSITE OF", "ONE PIECE, THE GAME" ],
 			"jobs": [ "LEAD DEVELOPER", "PROJECT MANAGER" ],
 			"technos": [ "HTML", "FLASH", "JS" ],
 			"preview": "images/preview.jpg",
@@ -14,12 +14,10 @@
 			],
 			"url": "http://www.google.com",
 			"contents": [
-				{ 
-					"title": "SUPER FEATURE",
+				{
 					"content": "asdaskdla skdasl dkasldkasl dkasl dasldasj lsadk alskda lsdkasl daskd laskd laskd laskd laskd lasdk alsdk asldk asldk askdl askdl aksldk asld askdla kldaskld sakdlas kdlask dlaskd als dkasdl kasdlqowdji eoqwje qwor ewi tjeoqwipe qjop jepqwje qwope"
 				},
-				{ 
-					"title": "SUPER FEATURE 2",
+				{
 					"content": "asdaskdla skdasl dkasldkasl dkasl dasldasj lsadk alskda lsdkasl daskd laskd laskd laskd laskd lasdk alsdk asldk asldk askdl askdl aksldk asld askdla kldaskld sakdlas kdlask dlaskd als dkasdl kasdlqowdji eoqwje qwor ewi tjeoqwipe qjop jepqwje qwope"
 				}
 			]

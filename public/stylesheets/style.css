@@ -498,6 +498,7 @@ article.top h2 {
 }
 #project .top {
   overflow: hidden;
+  padding-bottom: 10px;
 }
 #project .top .left,
 #project .top .right {
@@ -510,26 +511,26 @@ article.top h2 {
 #project .top .right {
   width: 30%;
 }
-#page_title {
+#project #page_title {
   font-size: 28px;
   height: 28px;
   line-height: 30px;
   margin-bottom: 10px;
 }
-#page_description {
+#project #page_description {
   color: #3d3944;
   margin-bottom: 10px;
 }
-#page_description .holder {
+#project #page_description .holder {
   margin-bottom: 2px;
 }
-#page_description,
-#skills {
+#project #page_description,
+#project #skills {
   font-size: 18px;
   line-height: 20px;
 }
-#page_description .holder,
-#skills .holder {
+#project #page_description .holder,
+#project #skills .holder {
   height: 18px;
 }
 #skills {
@@ -547,7 +548,6 @@ article.top h2 {
 }
 #bt_visit {
   margin-top: 20px;
-  margin-bottom: 20px;
 }
 #project_description {
   font-size: 14px;

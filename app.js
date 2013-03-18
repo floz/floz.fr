@@ -21,7 +21,7 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
-  app.use(stylus.middleware( { src: path.join( __dirname, '/public_src' )
+  app.use(stylus.middleware( { src: path.join( __dirname, '/src' )
                              , dest: path.join( __dirname, '/public' )
                              , compile: compile }) );
   app.use(express.static(path.join(__dirname, 'public')));
@@ -32,7 +32,8 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.home);
-app.get('/projects/:id?', routes.project);
+app.get('/projects/:id?', routes.layoutProject);
+app.get('/projects_ajax/:id?', routes.project);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

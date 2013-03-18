@@ -1,65 +1,58 @@
-extends layout
 include mixins
 
-block content
-	section#project
-		article.top
-			.left
-				#page_title
-					.scrolling_content= data.title
-				#page_description
-					- for subtitle in data.subtitles
+section#project
+	article.top
+		.left
+			#page_title
+				.scrolling_content= data.title
+			#page_description
+				- for subtitle in data.subtitles
+					.holder
+						.scrolling_content= subtitle
+			#skills
+				.cnt.jobs
+					.holder.title
+						.emul JOBS:
+						.scrolling_content JOBS:
+					- for job, i in data.jobs
 						.holder
-							.scrolling_content= subtitle
-				#skills
-					.cnt.jobs
-						.holder.title
-							.emul JOBS:
-							.scrolling_content JOBS:
-						- for job, i in data.jobs
-							.holder
-								-if( i < data.jobs.length - 1 )
-									.emul= job
-										/
-									.scrolling_content= job
-										/
-								-else
-									.emul= job
-									.scrolling_content= job
-					.cnt
-						.holder.title
-							.emul TECHNOS:
-							.scrolling_content TECHNOS:
-						- for techno, i in data.technos
-							.holder
-								-if( i < data.technos.length - 1 )
-									.emul= techno
-										/
-									.scrolling_content= techno
-										/
-								-else
-									.emul= techno
-									.scrolling_content= techno
-				#bt_visit
-					mixin bt( "> VISIT", data.url )
-			.right
-				#project_description
-					- for content in data.contents
-						.description
-							.content= content.content
-		article.bot
-			#diaporama
-				ul
-					- for image in data.images
-						li
-							img(src=image, alt="project image of #{data.title}")
-				#diaporama_controls
-					.bts
-						.prev
-							mixin bt( "< PREV", "#prev" )
-						.next
-							mixin bt( "NEXT >", "#next" )
-					#pagination
-						#pagination_current_idx 0
-						span /
-						#pagination_count= data.images.length
+							-if( i < data.jobs.length - 1 )
+								.emul= job
+									/
+								.scrolling_content= job
+									/
+							-else
+								.emul= job
+								.scrolling_content= job
+				.cnt
+					.holder.title
+						.emul TECHNOS:
+						.scrolling_content TECHNOS:
+					- for techno, i in data.technos
+						.holder
+							-if( i < data.technos.length - 1 )
+								.emul= techno
+									/
+								.scrolling_content= techno
+									/
+							-else
+								.emul= techno
+								.scrolling_content= techno
+			#bt_visit
+				mixin bt( "> VISIT", data.url )
+		.right
+			#project_description
+				- for content in data.contents
+					.description
+						.holder
+							.scrolling_content= content.content
+	article.bot
+		#diaporama
+			ul
+				- for dataImage in data.images
+					li
+						.img
+							.cnt_img(data-url_img=dataImage.url)
+								noscript
+									img(src=dataImage.url, alt="project image of #{data.title}", width="690", height="460")
+						.description= dataImage.text

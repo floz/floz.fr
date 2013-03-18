@@ -9,14 +9,14 @@
 			width 30%
 			margin-right 4%
 		.right 
-			width 30%
+			width 64%
 	#page_title
 		font-size h = 28px
 		height h
 		line-height h + 2px
 		margin-bottom 10px
 	#page_description
-		color #3d3944
+		color vgraydark
 		margin-bottom 10px
 		.holder
 			margin-bottom 2px
@@ -41,10 +41,15 @@
 
 #project_description
 	font-size 14px
-	font-weight 400
+	font-weight bold
+	line-height 16px
 	margin-top 38px
+	letter-spacing 1px
 	.description
+		position relative
 		margin-bottom 10px
+	.holder
+		position relative
 
 #diaporama
 	position relative
@@ -55,10 +60,31 @@
 	padding-bottom 10px
 	ul
 		float left
-		width 90%
+		width 100%
+	li
 		height 380px
 		overflow hidden
-		background-color #ff00ff
+		margin-bottom 10px
+		letter-spacing 1px
+		.img
+			position relative
+			background-color gray
+			height 380px
+			float left
+			width 75%
+			margin-right 1%
+		.cnt_img
+			position absolute
+			overflow hidden
+			width 100%
+			height 100%
+			img
+				position absolute
+		.description
+			float left
+			width 22%
+			line-h6ight 14px
+			line-height 20px
 
 #diaporama_controls
 	position relative
@@ -80,6 +106,6 @@
 		text-align center
 		line-height 50px
 		font-size 34px
-		color #a59ab9
+		color vgrayviolet
 		*
 			display inline-block

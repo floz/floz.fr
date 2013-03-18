@@ -8,9 +8,12 @@
 			"technos": [ "HTML", "FLASH", "JS" ],
 			"preview": "images/preview.jpg",
 			"images": [
-				"/images/preview.jpg",
-				"/images/preview2.jpg",
-				"/images/preview.jpg"
+				{ "url": "/images/preview.jpg",
+				  "text": "Description de l'image qui est ici. Lorem ipsum Lorem ipsum. Lorem ipsum Lorem ipsum. Lorem ipsum Lorem ipsum." },
+				{ "url": "/images/preview2.jpg",
+				  "text": "" },
+				{ "url": "/images/preview.jpg",
+				  "text": "Description de l'image" }
 			],
 			"url": "http://www.google.com",
 			"contents": [

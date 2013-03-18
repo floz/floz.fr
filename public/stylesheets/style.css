@@ -509,7 +509,7 @@ article.top h2 {
   margin-right: 4%;
 }
 #project .top .right {
-  width: 30%;
+  width: 64%;
 }
 #project #page_title {
   font-size: 28px;
@@ -551,11 +551,17 @@ article.top h2 {
 }
 #project_description {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: bold;
+  line-height: 16px;
   margin-top: 38px;
+  letter-spacing: 1px;
 }
 #project_description .description {
+  position: relative;
   margin-bottom: 10px;
+}
+#project_description .holder {
+  position: relative;
 }
 #diaporama {
   position: relative;
@@ -567,10 +573,36 @@ article.top h2 {
 }
 #diaporama ul {
   float: left;
-  width: 90%;
+  width: 100%;
+}
+#diaporama li {
   height: 380px;
   overflow: hidden;
-  background-color: #f0f;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+#diaporama li .img {
+  position: relative;
+  background-color: #808080;
+  height: 380px;
+  float: left;
+  width: 75%;
+  margin-right: 1%;
+}
+#diaporama li .cnt_img {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+#diaporama li .cnt_img img {
+  position: absolute;
+}
+#diaporama li .description {
+  float: left;
+  width: 22%;
+  line-h6ight: 14px;
+  line-height: 20px;
 }
 #diaporama_controls {
   position: relative;

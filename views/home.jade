@@ -4,41 +4,40 @@ include mixins
 block content
 	section#home
 		article.top
-			.title
-				.content HEY!
+			#page_title
+				.scrolling_content HEY!
 
-			.description
+			#page_description
 				.holder
-					.content I'M <h3>FLORIAN ZUMBRUNN</h3>,
+					.scrolling_content I'M <h3>FLORIAN ZUMBRUNN</h3>,
 				.holder
-					.content A <h2>CREATIVE DEVELOPER</h2>.
+					.scrolling_content A <h2>CREATIVE DEVELOPER</h2>.
 				.holder.small
-					.content <span>I LOVE TO CRAFT DIGITAL STUFF.</span>
+					.scrolling_content <span>I LOVE TO CRAFT DIGITAL STUFF.</span>
 
-			.skills
-				-var skills = [ "HTML5", "CSS3", "JADE", "JS", "COFFEESCRIPT", "SASS/STYLUS", "AS3", "FLASH REMOTING", "UNITY3D", "C#", "PYTHON", "PHP", "..." ]
+			#skills
+				-var skills = [ "HTML5", "CSS3", "JADE", "JS", "COFFEESCRIPT", "SASS/STYLUS", "AS3", "FLASH REMOTING", "UNITY3D", "C#", "PYTHON", "..." ]
 				-for skill, i in skills
-					-if( i < skills.length - 1 )
-						.holder
+					.holder
+						-if( i < skills.length - 1 )
 							.emul= skill
 								/
-							.content= skill
+							.scrolling_content= skill
 								/
-					-else
-						.holder
+						-else
 							.emul= skill
-							.content= skill
+							.scrolling_content= skill
 
 		article.bot
 			.holder
-				h4 MY <strong>PROJECTS:</strong>
+				h4.scrolling_content MY <strong>PROJECTS:</strong>
 			ul
 				-for project in data
-					li						
-						a(href="/works/"+project.id)
-							span.project_title
+					li				
+						a(href="/projects/"+project.id)
+							span.cnt_project_title
 								span.cnt
-									h3= project.title
+									span.project_title= project.title
 							span.project_holder
 								span.project
 									span.cnt_img(data-url_img=project.preview)

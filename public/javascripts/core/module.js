@@ -3,16 +3,59 @@ var Module;
 
 Module = (function() {
 
-  function Module() {
-    this.init();
+  Module.prototype._$module = null;
+
+  function Module(moduleName) {
+    var $element, element, _i, _len, _ref;
     ModuleManager.register(this);
+    this._$module = $(moduleName);
+    _ref = [this._$module.find(".scrolling_content")];
+    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+      element = _ref[_i];
+      $element = $(element);
+      $element.css({
+        "top": $element.height()
+      });
+    }
   }
 
-  Module.prototype.init = function() {};
-
-  Module.prototype.show = function() {};
+  Module.prototype.show = function() {
+    return this._showBot(this._showTop() - .75);
+  };
 
   Module.prototype.hide = function() {};
+
+  Module.prototype._showTop = function(delay) {
+    if (delay == null) {
+      delay = 0;
+    }
+    return delay = this._showScrollingContents(this._$module.find("article.top .scrolling_content"), delay);
+  };
+
+  Module.prototype._showBot = function(delay) {
+    if (delay == null) {
+      delay = 0;
+    }
+    return delay = this._showScrollingContents(this._$module.find("article.bot .scrolling_content"), delay);
+  };
+
+  Module.prototype._showScrollingContents = function($cnt, delay) {
+    var contents, element, _i, _len;
+    if (delay == null) {
+      delay = 0;
+    }
+    contents = $cnt;
+    for (_i = 0, _len = contents.length; _i < _len; _i++) {
+      element = contents[_i];
+      TweenLite.to(element, .4, {
+        top: 0,
+        delay: delay,
+        ease: Quad.easeOut
+      });
+      delay += 0.075;
+    }
+    return delay;
+  };
 
   return Module;
 

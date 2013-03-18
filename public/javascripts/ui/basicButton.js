@@ -6,15 +6,25 @@ BasicButton = (function() {
 
   function BasicButton(target) {
     this.target = target;
+    console.log(this.target);
     $(this.target).hover(over, out);
+    $(this.target).css("opacity", 0);
   }
 
-  BasicButton.prototype.show = function() {
-    return console.log("show");
+  BasicButton.prototype.show = function(delay) {
+    if (delay == null) {
+      delay = 0;
+    }
+    return TweenLite.to(this.target, .4, {
+      opacity: 1,
+      delay: delay
+    });
   };
 
   BasicButton.prototype.hide = function() {
-    return console.log("hide");
+    return TweenLite.to(this.target, .4, {
+      opacity: 0
+    });
   };
 
   over = function() {

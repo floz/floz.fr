@@ -3,21 +3,27 @@
 		{
 			"id": "one_piece",
 			"title": "ONE PIECE",
-			"subtitle": "DEVELOPMENT OF THE LAUNCHING SITE OF THE GAME ONE PIECE FOR PS3",
+			"subtitles": [ "DEVELOPMENT OF", "THE LAUNCHING WEBSITE OF", "ONE PIECE, THE GAME" ],
 			"jobs": [ "LEAD DEVELOPER", "PROJECT MANAGER" ],
-			"technos": "HTML/FLASH/JS",
-			"description": [
-				"I WORKED BLABLABLA",
-				"BLABLASD LSAD OW JOWD",
-				"ASD ASDLASD ASLD AS"
-			],
+			"technos": [ "HTML", "FLASH", "JS" ],
 			"preview": "images/preview.jpg",
 			"images": [
-				"preview.jpg",
-				"preview2.jpg",
-				"preview.jpg"
+				{ "url": "/images/preview.jpg",
+				  "text": "Description de l'image qui est ici. Lorem ipsum Lorem ipsum. Lorem ipsum Lorem ipsum. Lorem ipsum Lorem ipsum." },
+				{ "url": "/images/preview2.jpg",
+				  "text": "" },
+				{ "url": "/images/preview.jpg",
+				  "text": "Description de l'image" }
 			],
-			"url": "http://www.google.com"
+			"url": "http://www.google.com",
+			"contents": [
+				{
+					"content": "asdaskdla skdasl dkasldkasl dkasl dasldasj lsadk alskda lsdkasl daskd laskd laskd laskd laskd lasdk alsdk asldk asldk askdl askdl aksldk asld askdla kldaskld sakdlas kdlask dlaskd als dkasdl kasdlqowdji eoqwje qwor ewi tjeoqwipe qjop jepqwje qwope"
+				},
+				{
+					"content": "asdaskdla skdasl dkasldkasl dkasl dasldasj lsadk alskda lsdkasl daskd laskd laskd laskd laskd lasdk alsdk asldk asldk askdl askdl aksldk asld askdla kldaskld sakdlas kdlask dlaskd als dkasdl kasdlqowdji eoqwje qwor ewi tjeoqwipe qjop jepqwje qwope"
+				}
+			]
 		},
 		{
 			"id": "one_piece_2",
@@ -58,7 +64,7 @@
 			"url": "www.google.com"
 		},
 		{
-			"id": "one_piece_2",
+			"id": "one_piece_4",
 			"title": "ONE PIECE 2",
 			"subtitle": "2 DEVELOPMENT OF THE LAUNCHING SITE OF THE GAME ONE PIECE FOR PS3",
 			"jobs": [ "PROJECT MANAGER" ],
@@ -77,7 +83,7 @@
 			"url": "www.google.com"
 		},
 		{
-			"id": "one_piece_2",
+			"id": "one_piece_5",
 			"title": "ONE PIECE 2",
 			"subtitle": "2 DEVELOPMENT OF THE LAUNCHING SITE OF THE GAME ONE PIECE FOR PS3",
 			"jobs": [ "PROJECT MANAGER" ],
@@ -96,7 +102,7 @@
 			"url": "www.google.com"
 		},
 		{
-			"id": "one_piece_2",
+			"id": "one_piece_6",
 			"title": "ONE PIECE 2",
 			"subtitle": "2 DEVELOPMENT OF THE LAUNCHING SITE OF THE GAME ONE PIECE FOR PS3",
 			"jobs": [ "PROJECT MANAGER" ],

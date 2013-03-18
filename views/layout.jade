@@ -1,25 +1,25 @@
 doctype 5
 html
 	head
+		meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+		meta(name="description", content="Cetelem, Je gère mes dépenses")
+		meta(name="viewport", content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width")
 		title floz
 		link(rel='stylesheet', href='/stylesheets/fonts/quicksand.css')
 		link(rel='stylesheet', href='/stylesheets/reset.css')
 		link(rel='stylesheet', href='/stylesheets/style.css')
 	body
+		script
+			document.body.style.opacity = 0;
+
 		#main
 			block menu
 				include menu
-			block content
+			#main_content
+				block content
 
 		script(src='/javascripts/vendors/jquery.js')
 		script(src='/javascripts/vendors/greensock/TweenMax.min.js')
-		//- script(src='/javascripts/core/moduleManager.js')
-		//- script(src='/javascripts/core/module.js')
-		//- script(src='/javascripts/ui/basicButton.js')
-		//- script(src='/javascripts/ui/projectPreview.js')
-		//- script(src='/javascripts/menu.js')
-		//- script(src='/javascripts/home.js')
-		//- script(src='/javascripts/main.js')
 		script(src='/javascripts/main.min.js')
-		script
-			document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+		//- script
+		//- 	document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')

@@ -3,13 +3,39 @@ var Menu;
 
 Menu = (function() {
 
+  Menu.prototype._bts = [];
+
   function Menu() {
+    var bts;
+    bts = this._bts;
     $("nav#menu li").each(function() {
       if (!$(this).hasClass("activated")) {
-        return new BasicButton($(this).find(".bt"));
+        return bts[bts.length] = new BasicButton($(this).find(".bt"));
       }
     });
   }
+
+  Menu.prototype.show = function() {
+    var bt, _i, _len, _ref, _results;
+    _ref = this._bts;
+    _results = [];
+    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+      bt = _ref[_i];
+      _results.push(bt.show());
+    }
+    return _results;
+  };
+
+  Menu.prototype.hide = function() {
+    var bt, _i, _len, _ref, _results;
+    _ref = this._bts;
+    _results = [];
+    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+      bt = _ref[_i];
+      _results.push(bt.hide());
+    }
+    return _results;
+  };
 
   return Menu;
 

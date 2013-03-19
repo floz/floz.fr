@@ -3,9 +3,8 @@ $( document ).ready ->
 	new Main()
 
 class Main
-	constructor: ->
-		history.pushState( { path: "/" }, "", "/" )
 
+	constructor: ->
 		new Home()
 		new Project()
 

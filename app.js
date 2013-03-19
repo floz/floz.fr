@@ -31,7 +31,8 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-app.get('/', routes.home);
+app.get('/', routes.layoutHome);
+app.get('/ajax', routes.home);
 app.get('/projects/:id?', routes.layoutProject);
 app.get('/projects_ajax/:id?', routes.project);
 

@@ -9,7 +9,6 @@ Home = (function(_super) {
   __extends(Home, _super);
 
   function Home() {
-    this._onPageLoadSuccess = __bind(this._onPageLoadSuccess, this);
     this._onProjectClick = __bind(this._onProjectClick, this);
     var $element, element, _i, _len, _ref;
     Home.__super__.constructor.call(this, "#home");
@@ -53,17 +52,7 @@ Home = (function(_super) {
     e.preventDefault();
     href = e.currentTarget.href;
     projectName = href.split("/").pop();
-    history.pushState({
-      path: href
-    }, "", href);
-    return $.ajax({
-      url: "/projects_ajax/" + projectName,
-      success: this._onPageLoadSuccess
-    });
-  };
-
-  Home.prototype._onPageLoadSuccess = function(data) {
-    return $("#main_content").html(data);
+    return navManager.get().set(href, "/projects_ajax/" + projectName);
   };
 
   return Home;

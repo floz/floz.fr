@@ -29,5 +29,3 @@ class ProjectImg
 		@$img.width( @widthImgOrigin * ratio )
 		@$img.height( @heightImgOrigin * ratio )
 		@$img.css( { top: @$ref.height() - @$img.height() >> 1, left: @$ref.width() - @$img.width() >> 1 })
-		console.log @$img.width(), @$img.height()
-		console.log @widthImgOrigin, ratio

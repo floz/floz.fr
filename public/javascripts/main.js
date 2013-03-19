@@ -11,9 +11,6 @@ Main = (function() {
 
   function Main() {
     var menu;
-    history.pushState({
-      path: "/"
-    }, "", "/");
     new Home();
     new Project();
     menu = new Menu();

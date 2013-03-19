@@ -30,8 +30,4 @@ class Home extends Module
 		e.preventDefault()
 		href = e.currentTarget.href
 		projectName = href.split( "/" ).pop()
-		history.pushState( {path: href}, "", href )
-		$.ajax( { url: "/projects_ajax/" + projectName, success: @_onPageLoadSuccess } )
-
-	_onPageLoadSuccess: ( data ) =>
-		$( "#main_content" ).html( data )
+		navManager.get().set( href, "/projects_ajax/" + projectName )

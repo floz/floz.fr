@@ -42,12 +42,10 @@ ProjectImg = (function() {
     ratio = rw > rh ? rw : rh;
     this.$img.width(this.widthImgOrigin * ratio);
     this.$img.height(this.heightImgOrigin * ratio);
-    this.$img.css({
+    return this.$img.css({
       top: this.$ref.height() - this.$img.height() >> 1,
       left: this.$ref.width() - this.$img.width() >> 1
     });
-    console.log(this.$img.width(), this.$img.height());
-    return console.log(this.widthImgOrigin, ratio);
   };
 
   return ProjectImg;

@@ -3,6 +3,8 @@ class Home extends Module
 	constructor: ->
 		super "#home"
 
+		console.log "home"
+
 		for element in @_$module.find( ".scrolling_content" )
 			$element = $( element )
 			$element.css { "top": $element.height() }

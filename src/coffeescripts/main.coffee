@@ -1,4 +1,7 @@
-$( document ).ready ->
+$( document ).ready onReady
+
+onReady = ->
+	$( document ).unbind( "ready", onReady )
 	document.body.style.opacity = 1
 	new Main()
 

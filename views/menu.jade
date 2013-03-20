@@ -3,12 +3,9 @@ include mixins
 -var entries = [ { url: '/', id: "home", name: "HOME" } ]
 
 nav#menu
-	ul
-		-for entry, i in entries
-			-if( entry.id == navId )
-				li.activated(class="d" + (i + 1) )
-					mixin bt( entry.name, entry.url )
-			-else
-				li(class="d" + (i + 1) )
-					mixin bt( entry.name, entry.url )
-	.clear
+	-if( navId == "home" )
+		#bt_home.activated
+			mixin bt( "HOME", "/" )
+	-else 
+		#bt_home
+			mixin bt( "HOME", "/" )

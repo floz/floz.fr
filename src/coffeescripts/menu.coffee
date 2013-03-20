@@ -1,18 +1,14 @@
 class Menu
 
-	_bts: []
+	_$btHome: null
 
 	constructor: ->
-		bts = @_bts
-		$( "nav#menu li" ).each ->
-			if not $( @ ).hasClass "activated"
-				bts[ bts.length ] = new BasicButton( $( @ ).find( ".bt" ) )
+		console.log "menu"
+		@_$btHome = new HomeButton( $( "#bt_home .bt" ) )
 
 	show: ->
-		for bt in @_bts
-			bt.show()
+		@_$btHome.show()
 
 	hide: ->
-		for bt in @_bts
-			bt.hide()
+		@_$btHome.hide()
 			

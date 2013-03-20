@@ -3,38 +3,19 @@ var Menu;
 
 Menu = (function() {
 
-  Menu.prototype._bts = [];
+  Menu.prototype._$btHome = null;
 
   function Menu() {
-    var bts;
-    bts = this._bts;
-    $("nav#menu li").each(function() {
-      if (!$(this).hasClass("activated")) {
-        return bts[bts.length] = new BasicButton($(this).find(".bt"));
-      }
-    });
+    console.log("menu");
+    this._$btHome = new HomeButton($("#bt_home .bt"));
   }
 
   Menu.prototype.show = function() {
-    var bt, _i, _len, _ref, _results;
-    _ref = this._bts;
-    _results = [];
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      bt = _ref[_i];
-      _results.push(bt.show());
-    }
-    return _results;
+    return this._$btHome.show();
   };
 
   Menu.prototype.hide = function() {
-    var bt, _i, _len, _ref, _results;
-    _ref = this._bts;
-    _results = [];
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      bt = _ref[_i];
-      _results.push(bt.hide());
-    }
-    return _results;
+    return this._$btHome.hide();
   };
 
   return Menu;

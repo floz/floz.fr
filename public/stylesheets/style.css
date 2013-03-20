@@ -98,21 +98,16 @@ article.top h2 {
   padding-bottom: 20px;
   border-bottom: 1px dotted #c0c0c0;
 }
-#menu li {
-  float: left;
-  margin-left: 10px;
+#menu #bt_home {
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -o-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
 }
-#menu li.activated .bt {
+#menu #bt_home.activated .bt {
   background-color: #ff9c66;
   color: #fff;
-}
-#menu li:first-child {
-  margin-left: 0px;
 }
 #home .bot {
   position: relative;

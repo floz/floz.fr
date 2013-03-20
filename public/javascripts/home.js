@@ -12,6 +12,7 @@ Home = (function(_super) {
     this._onProjectClick = __bind(this._onProjectClick, this);
     var $element, element, _i, _len, _ref;
     Home.__super__.constructor.call(this, "#home");
+    console.log("home");
     _ref = this._$module.find(".scrolling_content");
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       element = _ref[_i];

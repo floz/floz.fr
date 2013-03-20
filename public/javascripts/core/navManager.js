@@ -9,32 +9,82 @@ navManager = (function() {
 
   NavManager = (function() {
 
+    NavManager.prototype.signalOnHome = null;
+
+    NavManager.prototype.signalOnProject = null;
+
     NavManager.prototype._$mainContent = null;
+
+    NavManager.prototype._isLoading = false;
+
+    NavManager.prototype._initialized = false;
+
+    NavManager.prototype.onHome = false;
 
     function NavManager() {
       this._onLoadSuccess = __bind(this._onLoadSuccess, this);
-      this._onPopState = __bind(this._onPopState, this);      this._$mainContent = $("#main_content");
-      $(window).bind("popstate", this._onPopState);
+      this._onPopState = __bind(this._onPopState, this);      this.signalOnHome = new signals.Signal();
+      this.signalOnProject = new signals.Signal();
+      this._$mainContent = $("#main_content");
+      this._initState();
     }
 
     NavManager.prototype._onPopState = function(e) {
+      console.log(window.history.state);
+      if (window.history.state === null) {
+        this._initState();
+        return;
+      }
       if (!window.history.state) {
         window.history.replaceState({
-          path: "/ajax"
-        }, "", "/");
+          path: window.history.state.path,
+          url: window.history.state.url
+        }, "", window.history.state.url);
       }
       return this._load();
     };
 
+    NavManager.prototype._initState = function() {
+      var href, projectName, splits;
+      href = window.location.href;
+      splits = href.split("/");
+      if (splits.length <= 4) {
+        return window.history.replaceState({
+          path: "/ajax",
+          url: href
+        }, "", href);
+      } else {
+        projectName = splits.pop();
+        return window.history.replaceState({
+          path: "/projects_ajax/" + projectName,
+          url: href
+        }, "", href);
+      }
+    };
+
     NavManager.prototype.set = function(url, urlAjax) {
+      if (!this._initialized) {
+        $(window).bind("popstate", this._onPopState);
+        this._initialized = true;
+      }
+      if (this._isLoading) {
+        return;
+      }
+      if (window.history.state) {
+        if (window.history.state.path === urlAjax) {
+          return;
+        }
+      }
       window.history.pushState({
-        path: urlAjax
+        path: urlAjax,
+        url: url
       }, "", url);
       return this._load();
     };
 
     NavManager.prototype._load = function() {
       var path;
+      this._isLoading = true;
       path = window.history.state.path;
       return $.ajax({
         url: path,
@@ -43,8 +93,19 @@ navManager = (function() {
     };
 
     NavManager.prototype._onLoadSuccess = function(data) {
-      console.log(window.history.state);
-      return this._$mainContent.html(data);
+      this._$mainContent.html(data);
+      this._dispachCurrentRub();
+      return this._isLoading = false;
+    };
+
+    NavManager.prototype._dispachCurrentRub = function() {
+      var path;
+      path = window.history.state.path;
+      if (path === "/ajax" || path === "/") {
+        return this.signalOnHome.dispatch();
+      } else {
+        return this.signalOnProject.dispatch();
+      }
     };
 
     return NavManager;

@@ -1,7 +1,5 @@
-$( document ).ready onReady
-
-onReady = ->
-	$( document ).unbind( "ready", onReady )
+$( document ).ready ->
+	console.log "bouboup"
 	document.body.style.opacity = 1
 	new Main()
 

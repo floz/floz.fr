@@ -4,12 +4,15 @@ var BasicButton,
 
 BasicButton = (function() {
 
+  BasicButton.prototype._$content = null;
+
   function BasicButton(_$target) {
     this._$target = _$target;
     this.out = __bind(this.out, this);
     this.over = __bind(this.over, this);
     this._activate();
     this._$target.css("opacity", 0);
+    this._$content = this._$target.find(".content");
   }
 
   BasicButton.prototype._activate = function() {
@@ -20,30 +23,45 @@ BasicButton = (function() {
     if (delay == null) {
       delay = 0;
     }
-    return TweenLite.to(this._$target, .4, {
+    TweenLite.to(this._$target, .4, {
       opacity: 1,
       delay: delay
+    });
+    return TweenLite.to(this._$content, .25, {
+      top: 0,
+      delay: delay + .2,
+      easing: Cubic.easeOut
     });
   };
 
   BasicButton.prototype.hide = function() {
-    return TweenLite.to(this._$target, .4, {
-      opacity: 0
+    TweenLite.to(this._$target, .4, {
+      opacity: 0,
+      delay: .2
+    });
+    return TweenLite.to(this._$content, .2, {
+      top: 0
     });
   };
 
   BasicButton.prototype.over = function() {
-    return TweenLite.to(this._$target, .2, {
-      color: "#ffffff",
+    TweenLite.to(this._$target, .2, {
       backgroundColor: "#ff9c66",
+      ease: Quad.easeOut
+    });
+    return TweenLite.to(this._$content, .2, {
+      color: "#ffffff",
       ease: Quad.easeOut
     });
   };
 
   BasicButton.prototype.out = function() {
-    return TweenLite.to(this._$target, .2, {
-      color: "#3d3944",
+    TweenLite.to(this._$target, .2, {
       backgroundColor: "#ffffff",
+      ease: Quad.easeOut
+    });
+    return TweenLite.to(this._$content, .2, {
+      color: "#3d3944",
       ease: Quad.easeOut
     });
   };

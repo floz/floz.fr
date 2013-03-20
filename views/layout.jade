@@ -9,9 +9,6 @@ html
 		link(rel='stylesheet', href='/stylesheets/reset.css')
 		link(rel='stylesheet', href='/stylesheets/style.css')
 	body
-		script
-			document.body.style.opacity = 0;
-
 		#main
 			block menu
 				include menu
@@ -22,5 +19,5 @@ html
 		script(src='/javascripts/vendors/signals.min.js')
 		script(src='/javascripts/vendors/greensock/TweenMax.min.js')
 		script(src='/javascripts/main.min.js')
-		//- script
-		//- 	document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+		script
+			document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')

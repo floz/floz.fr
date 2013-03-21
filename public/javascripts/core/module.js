@@ -7,7 +7,6 @@ Module = (function() {
 
   function Module(moduleName) {
     var $element, element, _i, _len, _ref;
-    ModuleManager.register(this);
     this._$module = $(moduleName);
     _ref = [this._$module.find(".scrolling_content")];
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
@@ -19,11 +18,13 @@ Module = (function() {
     }
   }
 
-  Module.prototype.show = function() {
-    return this._showBot(this._showTop() - .75);
+  Module.prototype.show = function(delay) {
+    return this._showBot(delay + this._showTop() - .75);
   };
 
-  Module.prototype.hide = function() {};
+  Module.prototype.hide = function() {
+    return 0;
+  };
 
   Module.prototype._showTop = function(delay) {
     if (delay == null) {

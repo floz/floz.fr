@@ -8,24 +8,23 @@ $(document).ready(function() {
 });
 
 Main = (function() {
-  var show;
+
+  Main.prototype._menu = null;
+
+  Main.prototype._moduleManager = null;
 
   function Main() {
-    var menu;
-    new Home();
-    new Project();
-    menu = new Menu();
-    menu.show();
-    show();
+    this._menu = new Menu();
+    this._moduleManager = new ModuleManager();
+    this._show();
   }
 
-  show = function() {
-    var module, _i, _len, _ref;
-    _ref = ModuleManager.modules;
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      module = _ref[_i];
-      module.show();
-    }
+  Main.prototype._show = function() {
+    this._menu.show();
+    this._moduleManager.show();
+    TweenLite.to($("#main"), .4, {
+      opacity: 1
+    });
   };
 
   return Main;

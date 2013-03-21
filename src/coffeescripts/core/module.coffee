@@ -3,18 +3,17 @@ class Module
 	_$module: null
 
 	constructor: ( moduleName ) ->
-		ModuleManager.register @
-
 		@_$module = $( moduleName )
 
 		for element in [ @_$module.find( ".scrolling_content" ) ]
 			$element = $( element )
 			$element.css { "top": $element.height() }
 
-	show: ->
-		@_showBot( @_showTop() - .75 )
+	show: ( delay ) ->
+		@_showBot( delay + @_showTop() - .75 )
 
 	hide: ->
+		0
 
 	_showTop: ( delay = 0 ) ->
 		delay = @_showScrollingContents( @_$module.find( "article.top .scrolling_content" ), delay )

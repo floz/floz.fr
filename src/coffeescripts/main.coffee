@@ -5,15 +5,22 @@ $( document ).ready ->
 
 class Main
 
+	_menu: null
+	_moduleManager: null
+
 	constructor: ->
-		new Home()
-		new Project()
+		@_menu = new Menu()		
+		@_moduleManager = new ModuleManager()
 
-		menu = new Menu()
-		menu.show()
-		
-		show()
+		@_show()
 
-	show = ->
-		do module.show for module in ModuleManager.modules
+	_show: ->
+		# do module.show for module in ModuleManager.modules
+
+		@_menu.show()
+		@_moduleManager.show()
+
+		TweenLite.to $( "#main" ), .4, 
+			opacity: 1
+
 		return

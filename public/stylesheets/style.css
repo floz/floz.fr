@@ -41,6 +41,9 @@ section {
   width: 95%;
   max-width: 920px;
   margin: auto;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
 #page_title {
   position: relative;

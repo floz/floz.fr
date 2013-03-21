@@ -29,37 +29,21 @@ navManager = (function() {
       this._initState();
     }
 
-    NavManager.prototype._onPopState = function(e) {
-      console.log(window.history.state);
-      if (window.history.state === null) {
-        this._initState();
-        return;
-      }
-      if (!window.history.state) {
-        window.history.replaceState({
-          path: window.history.state.path,
-          url: window.history.state.url
-        }, "", window.history.state.url);
-      }
-      return this._load();
-    };
-
     NavManager.prototype._initState = function() {
-      var href, projectName, splits;
+      var href, path, projectName, splits;
       href = window.location.href;
       splits = href.split("/");
       if (splits.length <= 4) {
-        return window.history.replaceState({
-          path: "/ajax",
-          url: href
-        }, "", href);
+        path = "/ajax";
       } else {
         projectName = splits.pop();
-        return window.history.replaceState({
-          path: "/projects_ajax/" + projectName,
-          url: href
-        }, "", href);
+        path = "/projects_ajax/" + projectName;
       }
+      window.history.replaceState({
+        path: path,
+        url: href
+      }, "", href);
+      return this._checkCurrentRub(path, false);
     };
 
     NavManager.prototype.set = function(url, urlAjax) {
@@ -82,6 +66,21 @@ navManager = (function() {
       return this._load();
     };
 
+    NavManager.prototype._onPopState = function(e) {
+      console.log(window.history.state);
+      if (window.history.state === null) {
+        this._initState();
+        return;
+      }
+      if (!window.history.state) {
+        window.history.replaceState({
+          path: window.history.state.path,
+          url: window.history.state.url
+        }, "", window.history.state.url);
+      }
+      return this._load();
+    };
+
     NavManager.prototype._load = function() {
       var path;
       this._isLoading = true;
@@ -101,10 +100,23 @@ navManager = (function() {
     NavManager.prototype._dispachCurrentRub = function() {
       var path;
       path = window.history.state.path;
+      return this._checkCurrentRub(path);
+    };
+
+    NavManager.prototype._checkCurrentRub = function(path, andDispatch) {
+      if (andDispatch == null) {
+        andDispatch = true;
+      }
       if (path === "/ajax" || path === "/") {
-        return this.signalOnHome.dispatch();
+        this.onHome = true;
+        if (andDispatch) {
+          return this.signalOnHome.dispatch();
+        }
       } else {
-        return this.signalOnProject.dispatch();
+        this.onHome = false;
+        if (andDispatch) {
+          return this.signalOnProject.dispatch();
+        }
       }
     };
 

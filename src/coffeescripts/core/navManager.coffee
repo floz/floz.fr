@@ -18,23 +18,18 @@ class navManager
 			@_$mainContent = $( "#main_content" )
 			@_initState()
 
-		_onPopState: ( e ) =>
-			console.log window.history.state
-			if window.history.state == null
-				@_initState()
-				return
-
-			window.history.replaceState( { path: window.history.state.path, url: window.history.state.url }, "", window.history.state.url ) if !window.history.state
-			@_load()
-
 		_initState: ->
 			href = window.location.href
 			splits = href.split( "/" )
+
 			if splits.length <= 4
-				window.history.replaceState( { path: "/ajax", url: href }, "", href )
+				path = "/ajax"
 			else
 				projectName = splits.pop()
-				window.history.replaceState( { path: "/projects_ajax/" + projectName, url: href }, "", href )
+				path = "/projects_ajax/" + projectName
+
+			window.history.replaceState( { path: path, url: href }, "", href )
+			@_checkCurrentRub( path, false )
 
 		set: ( url, urlAjax ) ->
 			if not @_initialized
@@ -49,6 +44,15 @@ class navManager
 					return
 
 			window.history.pushState( { path: urlAjax, url: url }, "", url )
+			@_load()
+
+		_onPopState: ( e ) =>
+			console.log window.history.state
+			if window.history.state == null
+				@_initState()
+				return
+
+			window.history.replaceState( { path: window.history.state.path, url: window.history.state.url }, "", window.history.state.url ) if !window.history.state
 			@_load()
 
 		_load: ->
@@ -66,10 +70,15 @@ class navManager
 
 		_dispachCurrentRub: ->
 			path = window.history.state.path
+			@_checkCurrentRub( path )
+
+		_checkCurrentRub: ( path, andDispatch = true ) ->
 			if path == "/ajax" || path == "/"
-				@signalOnHome.dispatch()
+				@onHome = true
+				@signalOnHome.dispatch() if andDispatch
 			else
-				@signalOnProject.dispatch()
+				@onHome = false
+				@signalOnProject.dispatch() if andDispatch
 
 
 	_instance = null

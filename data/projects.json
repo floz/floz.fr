@@ -1,124 +1,210 @@
 {
 	"projects": [
 		{
-			"id": "one_piece",
-			"title": "ONE PIECE",
-			"subtitles": [ "DEVELOPMENT OF", "THE LAUNCHING WEBSITE OF", "ONE PIECE, THE GAME" ],
-			"jobs": [ "LEAD DEVELOPER", "PROJECT MANAGER" ],
-			"technos": [ "HTML", "FLASH", "JS" ],
-			"preview": "images/preview.jpg",
+			"id": "nissan_geneve",
+			"title": "NISSAN LEAF",
+			"subtitles": [ "CREATION OF A TACTILE", "APPLICATION FOR THE", "GENEVA MOTOR SHOW" ],
+			"jobs": [ "LEAD DEVELOPER" ],
+			"technos": [ "AIR", "AS3" ],
+			"preview": "images/nissan_geneve/preview.jpg",
 			"images": [
-				{ "url": "/images/preview.jpg",
-				  "text": "Description de l'image qui est ici. Lorem ipsum Lorem ipsum. Lorem ipsum Lorem ipsum. Lorem ipsum Lorem ipsum." },
-				{ "url": "/images/preview2.jpg",
+				{ "url": "/images/nissan_geneve/04.jpg",
 				  "text": "" },
-				{ "url": "/images/preview.jpg",
-				  "text": "Description de l'image" }
+				{ "url": "/images/nissan_geneve/00.jpg",
+				  "text": "" },
+				{ "url": "/images/nissan_geneve/01.jpg",
+				  "text": "" },
+				{ "url": "/images/nissan_geneve/02.jpg",
+				  "text": "" },
+				{ "url": "/images/nissan_geneve/03.jpg",
+				  "text": "" }
 			],
-			"url": "http://www.google.com",
+			"url": "#",
 			"contents": [
 				{
-					"content": "asdaskdla skdasl dkasldkasl dkasl dasldasj lsadk alskda lsdkasl daskd laskd laskd laskd laskd lasdk alsdk asldk asldk askdl askdl aksldk asld askdla kldaskld sakdlas kdlask dlaskd als dkasdl kasdlqowdji eoqwje qwor ewi tjeoqwipe qjop jepqwje qwope"
-				},
-				{
-					"content": "asdaskdla skdasl dkasldkasl dkasl dasldasj lsadk alskda lsdkasl daskd laskd laskd laskd laskd lasdk alsdk asldk asldk askdl askdl aksldk asld askdla kldaskld sakdlas kdlask dlaskd als dkasdl kasdlqowdji eoqwje qwor ewi tjeoqwipe qjop jepqwje qwope"
+					"content": "I was in charge of the development of this tactical AIR application. The visitor of the Geneva Motor Show could discover all the cars created by Nissan through history."
 				}
 			]
 		},
 		{
-			"id": "one_piece_2",
-			"title": "ONE PIECE 2",
-			"subtitle": "2 DEVELOPMENT OF THE LAUNCHING SITE OF THE GAME ONE PIECE FOR PS3",
-			"jobs": [ "PROJECT MANAGER" ],
-			"technos": [ "HTML", "FLASH", "JS", "TOTO" ],
-			"description": [
-				"I WORKED BLABLABLA",
-				"BLABLASD LSAD OW JOWD"
-			],
-			"preview": "images/10.jpg",
+			"id": "phone_fight",
+			"title": "PHONE FIGHT",
+			"subtitles": [ "CREATION", "OF THE AMAZING GAME", "PHONE FIGHT"],
+			"jobs": [ "GAME DESIGNER", "LEAD 2D ENGINE DEVELOPER", "CREATIVE DEVELOPER" ],
+			"technos": [ "C#", "FLASH", "UNITY3D" ],
+			"preview": "images/phone_fight/preview.png",
 			"images": [
-				"preview.jpg",
-				"preview2.jpg",
-				"preview.jpg",
-				"preview2.jpg"
+				{ "url": "/images/phone_fight/00.jpg",
+				  "text": "" },
+				{ "url": "/images/phone_fight/01.jpg",
+				  "text": "" },
+				{ "url": "/images/phone_fight/02.jpg",
+				  "text": "" },
+				{ "url": "/images/phone_fight/03.jpg",
+				  "text": "" }
 			],
-			"url": "www.google.com"
+			"url": "http://mobinlife.com/phonefight/",
+			"contents": [
+				{
+					"content": "PhoneFight is the result of a little more than a year of work."
+				},
+				{
+					"content": "I've been in charge of designing the 2D engine to render the game. As the team had a huge background development based on Flash, I've decided to recreate the same mecanism and to stay close to his API."
+				},
+				{
+					"content": "My other role in the team was to design, develop and animate most of the game screen present in the application."
+				}
+			]
 		},
 		{
-			"id": "one_piece_3",
-			"title": "ONE PIECE 2",
-			"subtitle": "2 DEVELOPMENT OF THE LAUNCHING SITE OF THE GAME ONE PIECE FOR PS3",
-			"jobs": [ "PROJECT MANAGER" ],
-			"technos": [ "HTML", "FLASH", "JS", "TOTO" ],
-			"description": [
-				"I WORKED BLABLABLA",
-				"BLABLASD LSAD OW JOWD"
-			],
-			"preview": "images/preview.jpg",
+			"id": "one_piece",
+			"title": "ONE PIECE",
+			"subtitles": [ "THE LAUNCHING", "WEBSITE OF THE", "GAME ONE PIECE", "FOR PS3"],
+			"jobs": [ "LEAD DEVELOPER" ],
+			"technos": [ "AS3" ],
+			"preview": "images/one_piece/preview.jpg",
 			"images": [
-				"preview.jpg",
-				"preview2.jpg",
-				"preview.jpg",
-				"preview2.jpg"
+				{ "url": "/images/one_piece/00.jpg",
+				  "text": "" },
+				{ "url": "/images/one_piece/01.jpg",
+				  "text": "" },
+				{ "url": "/images/one_piece/02.jpg",
+				  "text": "" },
+				{ "url": "/images/one_piece/03.jpg",
+				  "text": "" },
+				{ "url": "/images/one_piece/04.jpg",
+				  "text": "" },
+				{ "url": "/images/one_piece/05.jpg",
+				  "text": "" },
+				{ "url": "/images/one_piece/06.jpg",
+				  "text": "" }
 			],
-			"url": "www.google.com"
+			"url": "#",
+			"contents": [
+				{ 
+					"content": "This website was built for the release of the new One Piece Game on PS3."
+				},
+				{ 
+					"content": "We organized the project around 2 mini games. One of them consisted of an ameliorated quizz in which the user navigated between island in order to answer to challenging questions."
+				}
+			]
 		},
 		{
-			"id": "one_piece_4",
-			"title": "ONE PIECE 2",
-			"subtitle": "2 DEVELOPMENT OF THE LAUNCHING SITE OF THE GAME ONE PIECE FOR PS3",
-			"jobs": [ "PROJECT MANAGER" ],
-			"technos": [ "HTML", "FLASH", "JS", "TOTO" ],
-			"description": [
-				"I WORKED BLABLABLA",
-				"BLABLASD LSAD OW JOWD"
-			],
-			"preview": "images/09.jpg",
+			"id": "wido_riftsofdestiny",
+			"title": "WIDO",
+			"subtitles": [ "CUTTING EDGE PROJECT", "BASED ON MOLEHILL", "DURING BETA"],
+			"jobs": [ "PROJECT MANAGER", "LEAD DEVELOPER", "TOOLS DEVELOPER" ],
+			"technos": [ "AS3", "JAVA", "AIR", "ANDROID" ],
+			"preview": "images/wido/preview.jpg",
 			"images": [
-				"preview.jpg",
-				"preview2.jpg",
-				"preview.jpg",
-				"preview2.jpg"
+				{ "url": "/images/wido/00.jpg",
+				  "text": "" },
+				{ "url": "/images/wido/01.jpg",
+				  "text": "" },
+				{ "url": "/images/wido/02.jpg",
+				  "text": "" },
+				{ "url": "/images/wido/03.jpg",
+				  "text": "" },
+				{ "url": "/images/wido/04.jpg",
+				  "text": "" },
+				{ "url": "/images/wido/05.jpg",
+				  "text": "" },
+				{ "url": "/images/wido/11.jpg",
+				  "text": "" },
+				{ "url": "/images/wido/12.jpg",
+				  "text": "" },
+				{ "url": "/images/wido/06.jpg",
+				  "text": "" },
+				{ "url": "/images/wido/07.jpg",
+				  "text": "" },
+				{ "url": "/images/wido/08.jpg",
+				  "text": "" },
+				{ "url": "/images/wido/09.jpg",
+				  "text": "" },
+				{ "url": "/images/wido/10.jpg",
+				  "text": "" }
 			],
-			"url": "www.google.com"
+			"contents": [
+				{
+					"content": "Wido, Rifts of destiny, is a student project realized during my second year at Gobelins. It has been created with 4 teamates: 2 other developers and 2 graphics designers."
+				},
+				{
+					"content": "We designed a playable prototype in which the user can use his smartphone to control the Wido, the hero."
+				},
+				{
+					"content": "I developed a 2D engine built on top of Molehill, the first code-name of Stage3D, which permits us to use the GPU to display graphics. This was a real challenge as no engine were existing at the period. We also developed 2 editors in order to organize a great workflow between developers and graphics designers."
+				}
+			],
+			"url": "http://wido-riftsofdestiny.com/fr"
 		},
 		{
-			"id": "one_piece_5",
-			"title": "ONE PIECE 2",
-			"subtitle": "2 DEVELOPMENT OF THE LAUNCHING SITE OF THE GAME ONE PIECE FOR PS3",
-			"jobs": [ "PROJECT MANAGER" ],
-			"technos": [ "HTML", "FLASH", "JS", "TOTO" ],
-			"description": [
-				"I WORKED BLABLABLA",
-				"BLABLASD LSAD OW JOWD"
-			],
-			"preview": "images/preview.jpg",
+			"id": "phorm",
+			"title": "PHORM",
+			"subtitles": [ "PEOTIC GAME", "AND CREATIVE TOOL" ],
+			"jobs": [ "LEAD DEVELOPER", "GAME DESIGNER", "UX DESIGNER" ],
+			"technos": [ "AS3", "AIR" ],
+			"preview": "images/phorm/preview.jpg",
 			"images": [
-				"preview.jpg",
-				"preview2.jpg",
-				"preview.jpg",
-				"preview2.jpg"
+				{ "url": "/images/phorm/00.jpg",
+				  "text": "" },
+				{ "url": "/images/phorm/01.jpg",
+				  "text": "" },
+				{ "url": "/images/phorm/02.jpg",
+				  "text": "" },
+				{ "url": "/images/phorm/03.jpg",
+				  "text": "" },
+				{ "url": "/images/phorm/04.jpg",
+				  "text": "" },
+				{ "url": "/images/phorm/05.jpg",
+				  "text": "" },
+				{ "url": "/images/phorm/06.jpg",
+				  "text": "" },
+				{ "url": "/images/phorm/07.jpg",
+				  "text": "" }
 			],
-			"url": "www.google.com"
+			"contents": [
+				{
+					"content": "Phorm is a student project created during the first year at Gobelins. It's a small team project: only an art director and me, as developer."
+				},
+				{
+					"content": "This application use a custom 2D isometric engine, developed especially for the project."
+				}
+			],
+			"url": "http://www.phorm.fr/preprod/"
 		},
 		{
-			"id": "one_piece_6",
-			"title": "ONE PIECE 2",
-			"subtitle": "2 DEVELOPMENT OF THE LAUNCHING SITE OF THE GAME ONE PIECE FOR PS3",
-			"jobs": [ "PROJECT MANAGER" ],
-			"technos": [ "HTML", "FLASH", "JS", "TOTO" ],
-			"description": [
-				"I WORKED BLABLABLA",
-				"BLABLASD LSAD OW JOWD"
-			],
-			"preview": "images/03.jpg",
+			"id": "cetelem_jegeremesfinsdemois",
+			"title": "CETELEM",
+			"subtitles": [ "RESPONSIVE WEBSITE", "IN HTML5/CSS3" ],
+			"jobs": [ "FRONT END DEVELOPER" ],
+			"technos": [ "HTML5", "CSS3", "SASS/COMPASS", "JS" ],
+			"preview": "images/cetelem/preview.jpg",
 			"images": [
-				"preview.jpg",
-				"preview2.jpg",
-				"preview.jpg",
-				"preview2.jpg"
+				{ "url": "/images/cetelem/00.jpg",
+				  "text": "" },
+				{ "url": "/images/cetelem/01.jpg",
+				  "text": "" },
+				{ "url": "/images/cetelem/02.jpg",
+				  "text": "" },
+				{ "url": "/images/cetelem/03.jpg",
+				  "text": "" },
+				{ "url": "/images/cetelem/04.jpg",
+				  "text": "" },
+				{ "url": "/images/cetelem/05.jpg",
+				  "text": "" },
+				{ "url": "/images/cetelem/06.jpg",
+				  "text": "" },
+				{ "url": "/images/cetelem/07.jpg",
+				  "text": "" },
+				{ "url": "/images/cetelem/08.jpg",
+				  "text": "" }
 			],
-			"url": "www.google.com"
+			"contents": [
+				{
+					"content": "JeGereMesFinsDeMois.com is a website created in order to inform people about bank loans."
+				}
+			],
+			"url": "http://www.jegeremesfinsdemois.com/"
 		}
 	]
 }	

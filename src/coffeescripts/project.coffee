@@ -14,13 +14,14 @@ class Project extends Module
 		$holder = @_$module.find( "#project_description .holder" )
 		$holder.css
 			"overflow": "hidden"
-			"height": $holder.height()
 
 		@_$scrolling_content = @_$module.find( "#project_description .scrolling_content" )
 		for element in @_$scrolling_content
 			$element = $( element )
+			$holder = $element.parent()
+			$holder.height( $element.height() )
 			$element.css 
-				"top": $holder.height()
+				"top": $element.height()
 				"position": "absolute"
 
 		@_$lis = @_$module.find( "#diaporama li" )

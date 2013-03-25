@@ -87,3 +87,50 @@
 			line-height 17px
 			font-size 13px
 			// font-weight bold
+
+#project
+	@media( max-width: 768px )
+		#page_title
+			font-size h = 24px
+			height h
+			line-height h + 2px
+		#page_description, #skills
+			font-size h = 14px
+			line-height h + 2px
+			.holder
+				height h
+		#project_description
+			font-size h = 12px
+			line-height h + 2px
+		#diaporama
+			.description
+				font-size h = 12px
+				line-height h + 2px
+	@media( max-width: 480px )
+		.top
+			overflow hidden
+			padding-bottom 10px
+			.left, .right 
+				float none
+			.left
+				width 100%
+				margin-right 4%
+			.right 
+				width 100%
+		#project_description
+			margin-top 20px
+		#diaporama
+			li
+				height h = 180px
+				.img
+					height h
+			.description
+				font-size h = 10px
+				line-height h + 2px
+	@media( max-width: 380px )
+		#diaporama
+			li
+				.img
+					width 100%
+			.description
+				display none

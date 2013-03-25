@@ -109,19 +109,50 @@ article.top h2 {
   color: #ff9c66;
 }
 #menu {
+  overflow: hidden;
   padding-bottom: 20px;
   border-bottom: 1px dotted #c0c0c0;
 }
-#menu #bt_home {
+#bt_home {
+  float: left;
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -o-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
 }
-#menu #bt_home.activated .bt {
+#bt_home.activated .bt {
   background-color: #ff9c66;
   color: #fff;
+}
+#social {
+  float: right;
+}
+#social ul {
+  overflow: hidden;
+}
+#social li {
+  float: left;
+  font-size: 18px;
+  margin-left: 10px;
+}
+#social li a {
+  display: block;
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px 20px;
+  text-decoration: none;
+  color: #756d83;
+  -webkit-transition: color 400ms ease-out, background-color 400ms ease-out;
+  -moz-transition: color 400ms ease-out, background-color 400ms ease-out;
+  -o-transition: color 400ms ease-out, background-color 400ms ease-out;
+  -ms-transition: color 400ms ease-out, background-color 400ms ease-out;
+  transition: color 400ms ease-out, background-color 400ms ease-out;
+}
+#social li a:hover {
+  color: #fff;
+  background-color: #ff9c66;
 }
 #home .bot {
   position: relative;
@@ -612,4 +643,66 @@ article.top h2 {
   width: 22%;
   line-height: 17px;
   font-size: 13px;
+}
+@media ( max-width: 768px ) {
+  #project #page_title {
+    font-size: 24px;
+    height: 24px;
+    line-height: 26px;
+  }
+  #project #page_description,
+  #project #skills {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  #project #page_description .holder,
+  #project #skills .holder {
+    height: 14px;
+  }
+  #project #project_description {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  #project #diaporama .description {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+@media ( max-width: 480px ) {
+  #project .top {
+    overflow: hidden;
+    padding-bottom: 10px;
+  }
+  #project .top .left,
+  #project .top .right {
+    float: none;
+  }
+  #project .top .left {
+    width: 100%;
+    margin-right: 4%;
+  }
+  #project .top .right {
+    width: 100%;
+  }
+  #project #project_description {
+    margin-top: 20px;
+  }
+  #project #diaporama li {
+    height: 180px;
+  }
+  #project #diaporama li .img {
+    height: 180px;
+  }
+  #project #diaporama .description {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+@media ( max-width: 380px ) {
+  #project #diaporama li .img {
+    width: 100%;
+  }
+  #project #diaporama .description {
+    display: none;
+  }
 }

@@ -23,16 +23,17 @@ Project = (function(_super) {
     this._btVisit = new BasicButton($("#bt_visit .bt"));
     $holder = this._$module.find("#project_description .holder");
     $holder.css({
-      "overflow": "hidden",
-      "height": $holder.height()
+      "overflow": "hidden"
     });
     this._$scrolling_content = this._$module.find("#project_description .scrolling_content");
     _ref = this._$scrolling_content;
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       element = _ref[_i];
       $element = $(element);
+      $holder = $element.parent();
+      $holder.height($element.height());
       $element.css({
-        "top": $holder.height(),
+        "top": $element.height(),
         "position": "absolute"
       });
     }

@@ -56,6 +56,10 @@ Project = (function(_super) {
     }
     delay = Project.__super__._showTop.call(this, delay);
     this._btVisit.show(delay - .3);
+    TweenLite.to($("#offline"), .4, {
+      opacity: .4,
+      delay: delay
+    });
     return delay;
   };
 

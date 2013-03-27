@@ -346,6 +346,14 @@ article.top h2 {
   color: #756d83;
   top: 11px;
 }
+#home .bot li .fwa {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent url("../images/fwa.png");
+  width: 100px;
+  height: 100px;
+}
 #home .bot>.bt {
   margin-top: 10px;
 }
@@ -589,6 +597,15 @@ article.top h2 {
 #bt_visit {
   margin-top: 20px;
 }
+#offline {
+  margin-top: 20px;
+  color: #a59ab9;
+  font-weight: normal;
+  font-size: 14px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
 #project_description {
   font-size: 14px;
   font-weight: normal;
@@ -627,7 +644,7 @@ article.top h2 {
   height: 380px;
   float: left;
   width: 75%;
-  margin-right: 1%;
+  margin-right: 2%;
 }
 #diaporama li .cnt_img {
   position: absolute;

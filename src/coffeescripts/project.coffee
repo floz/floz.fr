@@ -37,6 +37,7 @@ class Project extends Module
 	_showTop: ( delay = 0 ) ->
 		delay = super delay
 		@_btVisit.show( delay - .3 )
+		TweenLite.to $( "#offline" ), .4, { opacity: .4, delay: delay }
 		delay
 
 	_showBot: ( delay = 0 ) ->

@@ -38,8 +38,11 @@ section#project
 							-else
 								.emul= techno
 								.scrolling_content= techno
-			#bt_visit
-				mixin bt( "> VISIT", data.url )
+			- if( data.url != "#" )
+				#bt_visit
+					mixin bt( "> VISIT", data.url )
+			- else
+				.holder#offline PROJECT OFFLINE
 		.right
 			#project_description
 				- for content in data.contents

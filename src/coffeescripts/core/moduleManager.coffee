@@ -19,9 +19,10 @@ class ModuleManager
 		@_showNewModule()
 
 	_showNewModule: =>
-		TweenLite.to window, .5,
-			scrollTo: { y: 0 }
-			easing: Quad.easeOut
+		if !@_navManager.onHome
+			TweenLite.to window, .5,
+				scrollTo: { y: 0 }
+				easing: Quad.easeOut
 
 		_currentModule = if @_navManager.onHome then new Home() else new Project()
 		_currentModule.show( .2 )

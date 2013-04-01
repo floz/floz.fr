@@ -4,7 +4,7 @@
 			"id": "christmas_experiment",
 			"title": "CHRISTMAS EXP",
 			"subtitles": [ "ADVENT CALENDAR", "FEATURING EXPERIMENTS", "MADE BY", "DIGITAL ARTISTS" ],
-			"jobs": [ "FRONT END DEVELOPER", "PROJECT MANAGER" ],
+			"jobs": [ "FRONT END DEVELOPER", "PRODUCER" ],
 			"technos": [ "HTML5", "CSS3", "SASS/COMPASS", "JS" ],
 			"preview": "images/christmas_experiment_site/preview.jpg",
 			"type": "CUTTING EDGE EXPERIMENTS",
@@ -115,14 +115,18 @@
 			"images": [
 				{ "url": "/images/nissan_geneve/04.jpg",
 				  "text": "When no action is detected, the application will be in screensaver mode. Just touch to start the application." },
-				{ "url": "/images/nissan_geneve/00.jpg",
-				  "text": "They are both pad to change date. If you choose the same one on the left and the right, the car will appear on the middle." },
-				{ "url": "/images/nissan_geneve/01.jpg",
-				  "text": "" },
 				{ "url": "/images/nissan_geneve/02.jpg",
+				  "text": "There are both pad to change date. If you choose the same one on the left and the right, the car will appear on the middle." },
+				{ "url": "/images/nissan_geneve/06.jpg",
+				  "text": "The application is fully animated with some creative concepts." },
+				{ "url": "/images/nissan_geneve/05.jpg",
 				  "text": "" },
 				{ "url": "/images/nissan_geneve/03.jpg",
-				  "text": "Some great animations have been developped." }
+				  "text": "" },
+				{ "url": "/images/nissan_geneve/00.jpg",
+				  "text": "The tacticle table was at the center of the dedicated stand of the Nissan Leaf." },
+				{ "url": "/images/nissan_geneve/01.jpg",
+				  "text": "" }
 			],
 			"url": "#",
 			"contents": [
@@ -169,7 +173,7 @@
 			"subtitles": [ "THE LAUNCHING", "WEBSITE OF THE", "GAME ONE PIECE", "FOR PS3"],
 			"jobs": [ "LEAD DEVELOPER" ],
 			"technos": [ "AS3" ],
-			"preview": "images/one_piece/preview.jpg",
+			"preview": "images/one_piece/preview.png",
 			"type": "FLASH WEBSITE",
 			"fwa": "false",
 			"images": [
@@ -208,7 +212,7 @@
 			"subtitles": [ "CUTTING EDGE PROJECT", "BASED ON MOLEHILL", "DURING BETA"],
 			"jobs": [ "PROJECT MANAGER", "LEAD DEVELOPER", "TOOLS DEVELOPER" ],
 			"technos": [ "AS3", "JAVA", "AIR", "ANDROID" ],
-			"preview": "images/wido/preview.jpg",
+			"preview": "images/wido/preview.png",
 			"type": "MOLEHILL FLASH GAME",
 			"fwa": "false",
 			"images": [

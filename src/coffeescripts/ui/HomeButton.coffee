@@ -15,11 +15,14 @@ class HomeButton extends BasicButton
 		else	
 			@_onProject()
 
+
+
 	_onHome: =>
 		@_deactivate()
 		@_$btHome.addClass "activated"
 		@_$btHome.unbind "click"
 		@_$btHome.click @_onKillClick
+		@over()
 
 	_onProject: =>
 		@_activate()

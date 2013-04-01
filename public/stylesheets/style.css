@@ -2,7 +2,7 @@ body {
   font: 14px Georgia, Helvetica, Arial, sans-serif;
   background-color: #f0f0f0;
   color: #756d83;
-  padding-top: 20px;
+  padding-top: 10px;
   position: relative;
 }
 h2,
@@ -108,9 +108,22 @@ article.top h3 {
 article.top h2 {
   color: #ff9c66;
 }
+footer {
+  border-top: 1px dotted #c0c0c0;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  padding-top: 20px;
+}
+footer h3 {
+  font-size: 24px;
+  color: #3d3944;
+}
+footer a {
+  color: #ff9c66;
+}
 #menu {
   overflow: hidden;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   border-bottom: 1px dotted #c0c0c0;
 }
 #bt_home {
@@ -154,10 +167,14 @@ article.top h2 {
   color: #fff;
   background-color: #ff9c66;
 }
+@media ( max-width: 380px ) {
+  #social {
+    display: none;
+  }
+}
 #home .bot {
   position: relative;
   width: 100%;
-  margin-bottom: 100px;
 }
 #home .bot .holder {
   position: relative;
@@ -624,9 +641,6 @@ article.top h2 {
   position: relative;
   width: 100%;
   overflow: hidden;
-  border-bottom: 1px dotted #c0c0c0;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
 }
 #diaporama ul {
   float: left;

@@ -28,7 +28,6 @@ class navManager
 				projectName = splits.pop()
 				path = "/projects_ajax/" + projectName
 
-			window.history.replaceState( { path: path, url: href }, "", href )
 			@_checkCurrentRub( path, false )
 
 		set: ( url, urlAjax ) ->
@@ -47,7 +46,6 @@ class navManager
 			@_load()
 
 		_onPopState: ( e ) =>
-			console.log window.history.state
 			if window.history.state == null
 				@_initState()
 				return
@@ -73,7 +71,9 @@ class navManager
 			@_checkCurrentRub( path )
 
 		_checkCurrentRub: ( path, andDispatch = true ) ->
+			console.log path, andDispatch
 			if path == "/ajax" || path == "/"
+				console.log "here"
 				@onHome = true
 				@signalOnHome.dispatch() if andDispatch
 			else

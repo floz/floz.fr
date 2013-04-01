@@ -1,9 +1,9 @@
 class Home extends Module
 
+	@first = true
+
 	constructor: ->
 		super "#home"
-
-		console.log "home"
 
 		for element in @_$module.find( ".scrolling_content" )
 			$element = $( element )
@@ -14,7 +14,8 @@ class Home extends Module
 	_showBot: ( delay = 0 ) ->
 		super delay
 
-		delayAdd = .2
+		delay = 0
+		delayAdd = .1
 		$projects = @_$module.find( "article.bot li" )
 		for project in $projects
 			$project = $( project )
@@ -27,6 +28,8 @@ class Home extends Module
 				delayAdd = .05
 
 			$project.find( "a" ).click( @_onProjectClick )
+
+		Home.first = false
 
 	_onProjectClick: ( e ) =>
 		e.preventDefault()

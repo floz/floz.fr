@@ -71,9 +71,7 @@ class navManager
 			@_checkCurrentRub( path )
 
 		_checkCurrentRub: ( path, andDispatch = true ) ->
-			console.log path, andDispatch
 			if path == "/ajax" || path == "/"
-				console.log "here"
 				@onHome = true
 				@signalOnHome.dispatch() if andDispatch
 			else

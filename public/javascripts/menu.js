@@ -5,7 +5,6 @@ Menu = (function() {
   Menu.prototype._$btHome = null;
 
   function Menu() {
-    console.log("menu");
     this._$btHome = new HomeButton($("#bt_home .bt"));
   }
 

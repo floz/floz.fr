@@ -2,7 +2,6 @@
 var Main;
 
 $(document).ready(function() {
-  console.log("bouboup");
   document.body.style.opacity = 1;
   return new Main();
 });

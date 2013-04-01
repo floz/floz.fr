@@ -104,9 +104,7 @@ navManager = (function() {
       if (andDispatch == null) {
         andDispatch = true;
       }
-      console.log(path, andDispatch);
       if (path === "/ajax" || path === "/") {
-        console.log("here");
         this.onHome = true;
         if (andDispatch) {
           return this.signalOnHome.dispatch();

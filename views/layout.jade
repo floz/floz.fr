@@ -10,7 +10,7 @@ html
 		link(rel='stylesheet', href='/stylesheets/mfglabs_iconset.css')
 		link(rel='stylesheet', href='/stylesheets/style.css')
 
-		script(src='/javascripts/vendors/modernizr.js')
+		script(src='/javascripts/vendors/modernizr.min.js')
 	body
 		#main
 			block menu
@@ -18,7 +18,8 @@ html
 			#main_content
 				block content
 			footer
-				h3 Feel free to <a href="mailto:florian.zumbrunn@gmail.com">get in touch</a>!
+				.holder
+					h3 Feel free to <a href="mailto:florian.zumbrunn@gmail.com">get in touch</a>!
 
 		script(src='/javascripts/vendors/jquery.js')
 		script(src='/javascripts/vendors/signals.min.js')

@@ -114,9 +114,17 @@ footer {
   margin-bottom: 40px;
   padding-top: 20px;
 }
+footer .holder {
+  position: relative;
+  height: 24px;
+  overflow: hidden;
+}
 footer h3 {
   font-size: 24px;
   color: #3d3944;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 footer a {
   color: #ff9c66;

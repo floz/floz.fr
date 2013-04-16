@@ -382,7 +382,7 @@ footer a {
 #home .bot>.bt {
   margin-top: 10px;
 }
-@media ( min-width: 768px ) {
+@media ( min-width: 769px ) {
   #home .bot ul li:nth-child(3) {
     margin-right: 0;
   }

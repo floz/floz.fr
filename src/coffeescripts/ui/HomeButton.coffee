@@ -15,8 +15,6 @@ class HomeButton extends BasicButton
 		else	
 			@_onProject()
 
-
-
 	_onHome: =>
 		@_deactivate()
 		@_$btHome.addClass "activated"

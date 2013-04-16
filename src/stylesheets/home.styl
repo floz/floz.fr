@@ -152,11 +152,11 @@
 			margin-top 10px
 
 #home
-	@media( min-width: 768px )
+	@media( min-width: 769px )
 		.bot
-			for idx in 0..30
-				if( idx % 3 == 2 )
-					ul
+			ul
+				for idx in 0..30
+					if( idx % 3 == 2 )
 						li:nth-child({idx+1})
 							margin-right 0
 	@media( max-width: 768px )
@@ -187,9 +187,9 @@
 				margin-right (2.5)%
 				h3
 					font-size 12px
-			for idx in 0..30
-				if( idx % 2 == 1 )
-					ul
+			ul
+				for idx in 0..30
+					if( idx % 2 == 1 )
 						li:nth-child({idx+1})
 							margin-right 0
 	@media( max-width: 480px )

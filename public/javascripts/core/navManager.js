@@ -22,10 +22,17 @@ navManager = (function() {
 
     function NavManager() {
       this._onLoadSuccess = __bind(this._onLoadSuccess, this);
-      this._onPopState = __bind(this._onPopState, this);      this.signalOnHome = new signals.Signal();
+      this._onPopState = __bind(this._onPopState, this);
+      var state;
+
+      this.signalOnHome = new signals.Signal();
       this.signalOnProject = new signals.Signal();
       this._$mainContent = $("#main_content");
-      this._initState();
+      state = this._initState();
+      window.history.replaceState({
+        path: state.urlAjax,
+        url: state.url
+      }, "", state.url);
     }
 
     NavManager.prototype._initState = function() {
@@ -39,7 +46,11 @@ navManager = (function() {
         projectName = splits.pop();
         path = "/projects_ajax/" + projectName;
       }
-      return this._checkCurrentRub(path, false);
+      this._checkCurrentRub(path, false);
+      return {
+        urlAjax: path,
+        url: href
+      };
     };
 
     NavManager.prototype.set = function(url, urlAjax) {
@@ -63,6 +74,7 @@ navManager = (function() {
     };
 
     NavManager.prototype._onPopState = function(e) {
+      console.log("onPopState");
       if (window.history.state === null) {
         this._initState();
         return;
@@ -79,6 +91,7 @@ navManager = (function() {
     NavManager.prototype._load = function() {
       var path;
 
+      console.log("_load");
       this._isLoading = true;
       path = window.history.state.path;
       return $.ajax({

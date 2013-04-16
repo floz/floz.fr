@@ -16,7 +16,8 @@ class navManager
 			@signalOnProject = new signals.Signal()
 
 			@_$mainContent = $( "#main_content" )
-			@_initState()
+			state = @_initState()
+			window.history.replaceState( { path: state.urlAjax, url: state.url }, "", state.url )
 
 		_initState: ->
 			href = window.location.href
@@ -29,6 +30,7 @@ class navManager
 				path = "/projects_ajax/" + projectName
 
 			@_checkCurrentRub( path, false )
+			{ urlAjax: path, url: href }
 
 		set: ( url, urlAjax ) ->
 			if not @_initialized
@@ -46,6 +48,7 @@ class navManager
 			@_load()
 
 		_onPopState: ( e ) =>
+			console.log "onPopState"
 			if window.history.state == null
 				@_initState()
 				return
@@ -54,6 +57,7 @@ class navManager
 			@_load()
 
 		_load: ->
+			console.log "_load"
 			@_isLoading = true
 
 			path = window.history.state.path
